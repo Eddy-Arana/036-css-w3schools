@@ -1,0 +1,16 @@
+/* =====================================================
+   Lección 05 - External CSS
+===================================================== */
+
+h1{
+    text-align: center;
+    color: navy;
+}
+
+.externo{
+    color: steelblue;
+    font-size: 18px;
+    border: 2px solid steelblue;
+    padding: 10px;
+    background-color: aliceblue;
+}
