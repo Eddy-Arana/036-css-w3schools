@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 04 - CSS Selectors
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 04 - CSS Selectors</title>
+
+    <style>
+
+        /* =====================================================
+           Selector Universal
+        ====================================================== */
+
+        *{
+            box-sizing: border-box;
+        }
+
+        /* =====================================================
+           Selector por elemento
+        ====================================================== */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #eef5ff;
+            margin: 20px;
+        }
+
+        h1{
+            color: darkblue;
+        }
+
+        p{
+            font-size: 18px;
+            color: black;
+        }
+
+        /* =====================================================
+           Selector por ID
+        ====================================================== */
+
+        #tituloPrincipal{
+            text-align: center;
+            background-color: steelblue;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        /* =====================================================
+           Selector por clase
+        ====================================================== */
+
+        .center{
+            text-align: center;
+            color: crimson;
+        }
+
+        /* =====================================================
+           Selector elemento + clase
+        ====================================================== */
+
+        p.importante{
+            color: darkgreen;
+            font-weight: bold;
+        }
+
+        /* =====================================================
+           Varias clases
+        ====================================================== */
+
+        .grande{
+            font-size: 24px;
+        }
+
+        .fondo{
+            background-color: lightyellow;
+            border: 2px solid orange;
+            padding: 10px;
+        }
+
+        /* =====================================================
+           Selector agrupado
+        ====================================================== */
+
+        h2,
+        h3,
+        footer{
+            text-align: center;
+            color: darkred;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id="tituloPrincipal">
+        Lección 04 - CSS Selectors
+    </h1>
+
+    <hr>
+
+    <h2>1. Selector por elemento</h2>
+
+    <p>
+        Este párrafo recibe estilos porque todos los elementos
+        <strong>&lt;p&gt;</strong> son seleccionados mediante el selector de elemento.
+    </p>
+
+    <hr>
+
+    <h2>2. Selector por ID</h2>
+
+    <p>
+        El título principal utiliza el identificador
+        <strong>tituloPrincipal</strong>, el cual solo puede existir una vez en la página.
+    </p>
+
+    <hr>
+
+    <h2>3. Selector por clase</h2>
+
+    <p class="center">
+        Este párrafo utiliza la clase <strong>center</strong>.
+    </p>
+
+    <hr>
+
+    <h2>4. Selector elemento + clase</h2>
+
+    <p class="importante">
+        Este párrafo utiliza el selector
+        <strong>p.importante</strong>.
+    </p>
+
+    <hr>
+
+    <h2>5. Varias clases</h2>
+
+    <p class="grande fondo">
+        Este párrafo utiliza dos clases al mismo tiempo:
+        <strong>grande</strong> y <strong>fondo</strong>.
+    </p>
+
+    <hr>
+
+    <h2>6. Selector Universal (*)</h2>
+
+    <p>
+        El selector universal (*) afecta a todos los elementos HTML.
+        En este ejemplo se utiliza para aplicar la propiedad
+        <strong>box-sizing: border-box</strong>.
+    </p>
+
+    <hr>
+
+    <h2>7. Selector Agrupado</h2>
+
+    <p>
+        Los elementos <strong>h2</strong>, <strong>h3</strong> y
+        <strong>footer</strong> comparten los mismos estilos gracias
+        al selector agrupado.
+    </p>
+
+    <h3>Este es un encabezado H3</h3>
+
+    <footer>
+        Ejemplo de selector agrupado aplicado al elemento footer.
+    </footer>
+
+</body>
+
+</html>
