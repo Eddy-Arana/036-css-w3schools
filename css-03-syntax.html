@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 03 - CSS Syntax
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 03 - CSS Syntax</title>
+
+    <style>
+
+        /* =====================================================
+           Selector: body
+           Propiedades: background-color, font-family
+        ====================================================== */
+
+        body{
+            background-color: #f0f8ff;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Selector para el encabezado principal */
+
+        h1{
+            color: darkblue;
+            text-align: center;
+        }
+
+        /* Selector para los subtítulos */
+
+        h2{
+            color: darkred;
+        }
+
+        /* Selector para todos los párrafos */
+
+        p{
+            color: black;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        /* Selector para el contenedor */
+
+        .contenedor{
+            background-color: white;
+            max-width: 850px;
+            margin: auto;
+            padding: 25px;
+            border: 2px solid steelblue;
+            border-radius: 10px;
+        }
+
+        /* Selector para resaltar texto */
+
+        .ejemplo{
+            color: red;
+            text-align: center;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Lección 03 - CSS Syntax</h1>
+
+        <h2>¿Qué es la sintaxis de CSS?</h2>
+
+        <p>
+            Una regla CSS está formada por un <strong>selector</strong> y un
+            <strong>bloque de declaraciones</strong>. El selector indica qué
+            elemento HTML recibirá los estilos.
+        </p>
+
+        <h2>Estructura básica</h2>
+
+        <p class="ejemplo">
+            selector { propiedad: valor; }
+        </p>
+
+        <h2>Ejemplo explicado</h2>
+
+        <p>
+            En la regla anterior:
+        </p>
+
+        <ul>
+            <li><strong>Selector:</strong> identifica el elemento HTML.</li>
+            <li><strong>Propiedad:</strong> indica qué característica cambiar.</li>
+            <li><strong>Valor:</strong> especifica cómo se aplicará el cambio.</li>
+            <li>Cada declaración termina con un punto y coma (;).</li>
+            <li>Las declaraciones se escriben entre llaves { }.</li>
+        </ul>
+
+        <h2>Ejemplo aplicado</h2>
+
+        <p>
+            En este documento se utilizan diferentes selectores para aplicar
+            colores, tamaños de texto, márgenes, bordes y alineación,
+            demostrando la estructura básica de una regla CSS.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
