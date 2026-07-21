@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 10 - CSS Margins
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 10 - CSS Margins</title>
+
+    <style>
+
+        /* =====================================================
+           Estilos generales
+        ====================================================== */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #eef2f7;
+            margin: 20px;
+        }
+
+        h1{
+            text-align: center;
+            color: navy;
+        }
+
+        h2{
+            color: darkred;
+        }
+
+        section{
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.15);
+        }
+
+        /* =====================================================
+           margin individual
+        ====================================================== */
+
+        .individual{
+            background-color: lightblue;
+            border: 2px solid steelblue;
+
+            margin-top: 30px;
+            margin-right: 50px;
+            margin-bottom: 30px;
+            margin-left: 80px;
+
+            padding: 15px;
+        }
+
+        /* =====================================================
+           margin shorthand (4 valores)
+        ====================================================== */
+
+        .shorthand4{
+            background-color: lavender;
+            border: 2px solid purple;
+
+            margin: 20px 40px 60px 80px;
+
+            padding: 15px;
+        }
+
+        /* =====================================================
+           margin shorthand (3 valores)
+        ====================================================== */
+
+        .shorthand3{
+            background-color: lightgreen;
+            border: 2px solid green;
+
+            margin: 20px 50px 70px;
+
+            padding: 15px;
+        }
+
+        /* =====================================================
+           margin shorthand (2 valores)
+        ====================================================== */
+
+        .shorthand2{
+            background-color: peachpuff;
+            border: 2px solid chocolate;
+
+            margin: 20px 60px;
+
+            padding: 15px;
+        }
+
+        /* =====================================================
+           margin shorthand (1 valor)
+        ====================================================== */
+
+        .shorthand1{
+            background-color: mistyrose;
+            border: 2px solid crimson;
+
+            margin: 30px;
+
+            padding: 15px;
+        }
+
+        /* =====================================================
+           margin auto
+        ====================================================== */
+
+        .auto{
+            width: 300px;
+            margin: auto;
+
+            background-color: lightyellow;
+            border: 2px solid orange;
+            padding: 15px;
+        }
+
+        /* =====================================================
+           margin inherit
+        ====================================================== */
+
+        .padre{
+            margin-left: 80px;
+            border: 2px solid gray;
+            padding: 15px;
+        }
+
+        .hijo{
+            margin-left: inherit;
+            background-color: aliceblue;
+            border: 2px dashed steelblue;
+            padding: 10px;
+        }
+
+        /* =====================================================
+           Margin Collapse
+        ====================================================== */
+
+        .titulo1{
+            margin-bottom: 50px;
+            color: darkgreen;
+        }
+
+        .titulo2{
+            margin-top: 20px;
+            color: darkorange;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 10 - CSS Margins</h1>
+
+    <section>
+
+        <h2>1. Márgenes individuales</h2>
+
+        <div class="individual">
+            Este elemento utiliza margin-top, margin-right,
+            margin-bottom y margin-left.
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>2. Margin Shorthand (4 valores)</h2>
+
+        <div class="shorthand4">
+            margin: 20px 40px 60px 80px;
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>3. Margin Shorthand (3 valores)</h2>
+
+        <div class="shorthand3">
+            margin: 20px 50px 70px;
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>4. Margin Shorthand (2 valores)</h2>
+
+        <div class="shorthand2">
+            margin: 20px 60px;
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>5. Margin Shorthand (1 valor)</h2>
+
+        <div class="shorthand1">
+            margin: 30px;
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>6. Margin Auto</h2>
+
+        <div class="auto">
+            Este cuadro está centrado horizontalmente mediante
+            <strong>margin: auto;</strong>
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>7. Margin Inherit</h2>
+
+        <div class="padre">
+
+            Contenedor padre
+
+            <div class="hijo">
+                Este elemento hereda el margen izquierdo del padre
+                usando <strong>margin-left: inherit;</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>8. Margin Collapse</h2>
+
+        <h3 class="titulo1">
+            Primer encabezado (margin-bottom: 50px)
+        </h3>
+
+        <h3 class="titulo2">
+            Segundo encabezado (margin-top: 20px)
+        </h3>
+
+        <p>
+            Aunque los márgenes parecen sumar 70px,
+            CSS aplica <strong>Margin Collapse</strong>,
+            por lo que solo se utiliza el margen mayor.
+        </p>
+
+    </section>
+
+</body>
+
+</html>
