@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 06 - CSS Comments
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 06 - CSS Comments</title>
+
+    <style>
+
+        /* =====================================================
+           Comentario de varias líneas
+
+           Los comentarios ayudan a documentar el código CSS.
+           El navegador los ignora y no afectan el diseño.
+        ====================================================== */
+
+        body{
+            background-color: #f4f8fb;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+
+        /* Estilo para el título principal */
+
+        h1{
+            color: darkblue;
+            text-align: center;
+        }
+
+        /* Estilo para los subtítulos */
+
+        h2{
+            color: darkred;
+        }
+
+        /* Estilo para todos los párrafos */
+
+        p{
+            color: black;   /* Color del texto */
+            font-size: 18px; /* Tamaño de la fuente */
+            line-height: 1.6;
+        }
+
+        /* =====================================================
+           Clase contenedor
+        ====================================================== */
+
+        .contenedor{
+            background-color: white;
+            max-width: 850px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid steelblue;
+            border-radius: 10px;
+        }
+
+        /*
+        Este es un comentario de varias líneas.
+        Puede utilizarse para explicar bloques completos
+        de código CSS.
+        */
+
+        .resaltado{
+            color: crimson;
+            font-weight: bold;
+        }
+
+        /*
+        Ejemplo de código deshabilitado mediante comentarios.
+
+        h3{
+            color: green;
+        }
+
+        */
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Contenedor principal -->
+
+    <div class="contenedor">
+
+        <h1>Lección 06 - CSS Comments</h1>
+
+        <h2>¿Qué son los comentarios en CSS?</h2>
+
+        <p>
+            Los comentarios permiten explicar el código CSS para facilitar
+            su comprensión y mantenimiento. Los navegadores ignoran los
+            comentarios al mostrar la página.
+        </p>
+
+        <h2>Comentario en una línea</h2>
+
+        <p class="resaltado">
+            Este párrafo utiliza una clase cuyo estilo está acompañado de
+            comentarios dentro del código CSS.
+        </p>
+
+        <h2>Comentario de varias líneas</h2>
+
+        <p>
+            También es posible escribir comentarios que ocupen varias líneas
+            para documentar bloques completos de estilos.
+        </p>
+
+        <!-- Comentario HTML -->
+
+        <h2>Comentarios HTML y CSS</h2>
+
+        <p>
+            Los comentarios HTML utilizan la sintaxis
+            <strong>&lt;!-- comentario --&gt;</strong>,
+            mientras que los comentarios CSS utilizan
+            <strong>/* comentario */</strong>.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
