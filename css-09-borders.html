@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 09 - CSS Borders
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 09 - CSS Borders</title>
+
+    <style>
+
+        /* =====================================================
+           Estilos generales
+        ====================================================== */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f9;
+            margin: 20px;
+        }
+
+        h1{
+            text-align: center;
+            color: navy;
+        }
+
+        h2{
+            color: darkred;
+        }
+
+        section{
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+        }
+
+        .caja{
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        /* =====================================================
+           border-style
+        ====================================================== */
+
+        .dotted  { border-style: dotted; }
+        .dashed  { border-style: dashed; }
+        .solid   { border-style: solid; }
+        .double  { border-style: double; }
+        .groove  { border-style: groove; }
+        .ridge   { border-style: ridge; }
+        .inset   { border-style: inset; }
+        .outset  { border-style: outset; }
+
+        /* =====================================================
+           border-width
+        ====================================================== */
+
+        .thin{
+            border-style: solid;
+            border-width: thin;
+        }
+
+        .medium{
+            border-style: solid;
+            border-width: medium;
+        }
+
+        .thick{
+            border-style: solid;
+            border-width: thick;
+        }
+
+        .custom-width{
+            border-style: solid;
+            border-width: 5px 15px 3px 25px;
+        }
+
+        /* =====================================================
+           border-color
+        ====================================================== */
+
+        .color-name{
+            border: 4px solid red;
+        }
+
+        .color-hex{
+            border: 4px solid #3cb371;
+        }
+
+        .color-rgb{
+            border: 4px solid rgb(30,144,255);
+        }
+
+        .color-hsl{
+            border: 4px solid hsl(280,100%,50%);
+        }
+
+        .multi-color{
+            border-style: solid;
+            border-width: 6px;
+            border-color: red green blue orange;
+        }
+
+        /* =====================================================
+           Bordes individuales
+        ====================================================== */
+
+        .individual{
+            border-top: 4px dotted crimson;
+            border-right: 4px solid seagreen;
+            border-bottom: 4px double royalblue;
+            border-left: 4px dashed darkorange;
+        }
+
+        /* =====================================================
+           Propiedad shorthand border
+        ====================================================== */
+
+        .shorthand{
+            border: 5px solid teal;
+        }
+
+        /* =====================================================
+           Bordes redondeados
+        ====================================================== */
+
+        .radius-small{
+            border: 3px solid tomato;
+            border-radius: 5px;
+        }
+
+        .radius-medium{
+            border: 3px solid tomato;
+            border-radius: 15px;
+        }
+
+        .radius-large{
+            border: 3px solid tomato;
+            border-radius: 30px;
+        }
+
+        .radius-circle{
+            width: 120px;
+            height: 120px;
+            border: 4px solid tomato;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 09 - CSS Borders</h1>
+
+    <section>
+
+        <h2>1. border-style</h2>
+
+        <p class="caja dotted">Borde dotted</p>
+        <p class="caja dashed">Borde dashed</p>
+        <p class="caja solid">Borde solid</p>
+        <p class="caja double">Borde double</p>
+        <p class="caja groove">Borde groove</p>
+        <p class="caja ridge">Borde ridge</p>
+        <p class="caja inset">Borde inset</p>
+        <p class="caja outset">Borde outset</p>
+
+    </section>
+
+    <section>
+
+        <h2>2. border-width</h2>
+
+        <p class="caja thin">Borde thin</p>
+        <p class="caja medium">Borde medium</p>
+        <p class="caja thick">Borde thick</p>
+        <p class="caja custom-width">Anchos diferentes en cada lado</p>
+
+    </section>
+
+    <section>
+
+        <h2>3. border-color</h2>
+
+        <p class="caja color-name">Color por nombre</p>
+        <p class="caja color-hex">Color HEX</p>
+        <p class="caja color-rgb">Color RGB</p>
+        <p class="caja color-hsl">Color HSL</p>
+        <p class="caja multi-color">Cuatro colores diferentes</p>
+
+    </section>
+
+    <section>
+
+        <h2>4. Bordes individuales</h2>
+
+        <p class="caja individual">
+            Cada lado tiene un estilo y color diferente.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>5. border (Shorthand)</h2>
+
+        <p class="caja shorthand">
+            Este borde fue creado con la propiedad abreviada:
+            <strong>border: 5px solid teal;</strong>
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>6. border-radius</h2>
+
+        <p class="caja radius-small">Radio de 5px</p>
+        <p class="caja radius-medium">Radio de 15px</p>
+        <p class="caja radius-large">Radio de 30px</p>
+
+        <div class="radius-circle">50%</div>
+
+    </section>
+
+</body>
+</html>
