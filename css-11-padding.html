@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 11 - CSS Padding
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 11 - CSS Padding</title>
+
+    <style>
+
+        /* =====================================================
+           Estilos generales
+        ====================================================== */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #eef2f7;
+            margin: 20px;
+        }
+
+        h1{
+            text-align: center;
+            color: navy;
+        }
+
+        h2{
+            color: darkred;
+        }
+
+        section{
+            background-color: white;
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.15);
+        }
+
+        /* =====================================================
+           Estilo base para los ejemplos
+        ====================================================== */
+
+        .caja{
+            background-color: lightblue;
+            border: 3px solid steelblue;
+            margin-top: 15px;
+        }
+
+        /* =====================================================
+           Padding individual
+        ====================================================== */
+
+        .individual{
+
+            padding-top: 40px;
+            padding-right: 30px;
+            padding-bottom: 40px;
+            padding-left: 60px;
+
+        }
+
+        /* =====================================================
+           Padding shorthand (4 valores)
+        ====================================================== */
+
+        .padding4{
+
+            padding: 20px 40px 60px 80px;
+
+        }
+
+        /* =====================================================
+           Padding shorthand (3 valores)
+        ====================================================== */
+
+        .padding3{
+
+            padding: 20px 40px 60px;
+
+        }
+
+        /* =====================================================
+           Padding shorthand (2 valores)
+        ====================================================== */
+
+        .padding2{
+
+            padding: 20px 60px;
+
+        }
+
+        /* =====================================================
+           Padding shorthand (1 valor)
+        ====================================================== */
+
+        .padding1{
+
+            padding: 35px;
+
+        }
+
+        /* =====================================================
+           Padding en porcentaje
+        ====================================================== */
+
+        .porcentaje{
+
+            padding: 8%;
+            background-color: lightgreen;
+            border: 3px solid green;
+
+        }
+
+        /* =====================================================
+           Padding heredado
+        ====================================================== */
+
+        .padre{
+
+            padding-left: 60px;
+            border: 2px solid gray;
+            background-color: whitesmoke;
+
+        }
+
+        .hijo{
+
+            padding-left: inherit;
+            background-color: aliceblue;
+            border: 2px dashed steelblue;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 11 - CSS Padding</h1>
+
+    <section>
+
+        <h2>1. Padding individual</h2>
+
+        <div class="caja individual">
+
+            Se utilizan las propiedades:
+            padding-top,
+            padding-right,
+            padding-bottom y
+            padding-left.
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>2. Padding Shorthand (4 valores)</h2>
+
+        <div class="caja padding4">
+
+            padding: 20px 40px 60px 80px;
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>3. Padding Shorthand (3 valores)</h2>
+
+        <div class="caja padding3">
+
+            padding: 20px 40px 60px;
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>4. Padding Shorthand (2 valores)</h2>
+
+        <div class="caja padding2">
+
+            padding: 20px 60px;
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>5. Padding Shorthand (1 valor)</h2>
+
+        <div class="caja padding1">
+
+            padding: 35px;
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>6. Padding con porcentaje</h2>
+
+        <div class="porcentaje">
+
+            El espacio interno fue definido utilizando
+            un porcentaje (8%).
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>7. Padding Inherit</h2>
+
+        <div class="padre">
+
+            Contenedor padre
+
+            <div class="hijo">
+
+                Este elemento hereda el
+                padding izquierdo del contenedor padre
+                mediante
+                <strong>padding-left: inherit;</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
