@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 14 - CSS Outline
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 14 - CSS Outline</title>
+
+    <style>
+
+        /* =====================================================
+           Estilos generales
+        ====================================================== */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #eef2f7;
+            margin: 20px;
+        }
+
+        h1{
+            text-align: center;
+            color: navy;
+        }
+
+        h2{
+            color: darkred;
+            margin-top: 35px;
+        }
+
+        section{
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.15);
+        }
+
+        p{
+            padding: 10px;
+            margin: 20px 0;
+            border: 2px solid black;
+        }
+
+        /* =====================================================
+           Outline Style
+        ====================================================== */
+
+        .dotted{
+            outline-style: dotted;
+            outline-color: red;
+        }
+
+        .dashed{
+            outline-style: dashed;
+            outline-color: blue;
+        }
+
+        .solid{
+            outline-style: solid;
+            outline-color: green;
+        }
+
+        .double{
+            outline-style: double;
+            outline-color: purple;
+        }
+
+        /* =====================================================
+           Outline Width
+        ====================================================== */
+
+        .thin{
+            outline-style: solid;
+            outline-color: darkgreen;
+            outline-width: thin;
+        }
+
+        .medium{
+            outline-style: solid;
+            outline-color: darkorange;
+            outline-width: medium;
+        }
+
+        .thick{
+            outline-style: solid;
+            outline-color: crimson;
+            outline-width: thick;
+        }
+
+        .custom{
+            outline-style: solid;
+            outline-color: steelblue;
+            outline-width: 8px;
+        }
+
+        /* =====================================================
+           Outline Color
+        ====================================================== */
+
+        .hex{
+            outline: 4px solid #ff0000;
+        }
+
+        .rgb{
+            outline: 4px solid rgb(0,128,255);
+        }
+
+        .hsl{
+            outline: 4px solid hsl(120,100%,35%);
+        }
+
+        /* =====================================================
+           Outline Shorthand
+        ====================================================== */
+
+        .short1{
+            outline: dashed;
+        }
+
+        .short2{
+            outline: dotted red;
+        }
+
+        .short3{
+            outline: 7px solid gold;
+        }
+
+        .short4{
+            outline: thick ridge hotpink;
+        }
+
+        /* =====================================================
+           Outline con bordes redondeados
+        ====================================================== */
+
+        .rounded{
+            outline: 4px solid seagreen;
+            border-radius: 12px;
+        }
+
+        /* =====================================================
+           Outline Offset
+        ====================================================== */
+
+        .offset{
+            outline: 4px solid red;
+            outline-offset: 12px;
+            margin: 30px;
+        }
+
+        .negative{
+            background: lightyellow;
+            outline: 4px solid blue;
+            outline-offset: -6px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 14 - CSS Outline</h1>
+
+    <section>
+
+        <h2>1. Outline Style</h2>
+
+        <p class="dotted">Outline punteado (dotted).</p>
+
+        <p class="dashed">Outline discontinuo (dashed).</p>
+
+        <p class="solid">Outline sólido (solid).</p>
+
+        <p class="double">Outline doble (double).</p>
+
+    </section>
+
+    <section>
+
+        <h2>2. Outline Width</h2>
+
+        <p class="thin">Outline con ancho "thin".</p>
+
+        <p class="medium">Outline con ancho "medium".</p>
+
+        <p class="thick">Outline con ancho "thick".</p>
+
+        <p class="custom">Outline personalizado de 8px.</p>
+
+    </section>
+
+    <section>
+
+        <h2>3. Outline Color</h2>
+
+        <p class="hex">Color usando HEX.</p>
+
+        <p class="rgb">Color usando RGB.</p>
+
+        <p class="hsl">Color usando HSL.</p>
+
+    </section>
+
+    <section>
+
+        <h2>4. Outline Shorthand</h2>
+
+        <p class="short1">Solo estilo.</p>
+
+        <p class="short2">Estilo y color.</p>
+
+        <p class="short3">Ancho, estilo y color.</p>
+
+        <p class="short4">Outline completo usando shorthand.</p>
+
+    </section>
+
+    <section>
+
+        <h2>5. Outline con Border Radius</h2>
+
+        <p class="rounded">
+
+            El outline también puede acompañar a un borde redondeado
+            usando <strong>border-radius</strong>.
+
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>6. Outline Offset</h2>
+
+        <p class="offset">
+
+            Este outline tiene una separación de 12px respecto al borde.
+
+        </p>
+
+        <p class="negative">
+
+            Este outline utiliza un valor negativo (-6px), por lo que
+            aparece más cerca del borde.
+
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>7. Diferencia entre Border y Outline</h2>
+
+        <ul>
+
+            <li>El <strong>border</strong> forma parte del tamaño del elemento.</li>
+
+            <li>El <strong>outline</strong> se dibuja fuera del borde.</li>
+
+            <li>El outline no modifica el ancho ni el alto del elemento.</li>
+
+            <li>Puede utilizarse para resaltar botones, cuadros de texto y otros elementos.</li>
+
+        </ul>
+
+    </section>
+
+</body>
+
+</html>
