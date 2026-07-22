@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 13 - CSS Box Model
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 13 - CSS Box Model</title>
+
+    <style>
+
+        /* =====================================================
+           Estilos generales
+        ====================================================== */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #eef2f7;
+            margin: 20px;
+        }
+
+        h1{
+            text-align: center;
+            color: navy;
+        }
+
+        h2{
+            color: darkred;
+        }
+
+        section{
+            background-color: white;
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.15);
+        }
+
+        /* =====================================================
+           Caja principal del Box Model
+        ====================================================== */
+
+        .caja-modelo{
+
+            width: 300px;
+            height: 120px;
+
+            padding: 30px;
+
+            border: 10px solid seagreen;
+
+            margin: 30px;
+
+            background-color: lightgreen;
+
+        }
+
+        /* =====================================================
+           Ejemplo para mostrar el contenido
+        ====================================================== */
+
+        .contenido{
+
+            background-color: white;
+            border: 2px dashed gray;
+            padding: 10px;
+
+        }
+
+        /* =====================================================
+           Ejemplo de Width y Height
+        ====================================================== */
+
+        .medidas{
+
+            width: 320px;
+            height: 50px;
+
+            padding: 10px;
+
+            border: 5px solid steelblue;
+
+            margin: 20px 0;
+
+            background-color: aliceblue;
+
+        }
+
+        /* =====================================================
+           Caja con mayor margen
+        ====================================================== */
+
+        .margen{
+
+            width: 250px;
+
+            padding: 20px;
+
+            border: 5px solid tomato;
+
+            margin: 50px;
+
+            background-color: mistyrose;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 13 - CSS Box Model</h1>
+
+    <section>
+
+        <h2>1. Modelo de Caja</h2>
+
+        <div class="caja-modelo">
+
+            <div class="contenido">
+
+                <strong>Content</strong><br><br>
+
+                Esta área representa el contenido del elemento.
+                Alrededor se encuentran el padding, el borde
+                y el margen.
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>2. Width y Height</h2>
+
+        <div class="medidas">
+
+            Width: 320px<br>
+            Height: 50px<br>
+            Padding: 10px<br>
+            Border: 5px
+
+        </div>
+
+        <p>
+
+            <strong>Cálculo del ancho total:</strong><br>
+
+            320px (contenido)<br>
+            + 20px (padding izquierdo y derecho)<br>
+            + 10px (bordes izquierdo y derecho)<br>
+
+            = <strong>350px</strong>
+
+        </p>
+
+        <p>
+
+            <strong>Cálculo de la altura total:</strong><br>
+
+            50px (contenido)<br>
+            + 20px (padding superior e inferior)<br>
+            + 10px (bordes superior e inferior)<br>
+
+            = <strong>80px</strong>
+
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>3. Margin</h2>
+
+        <div class="margen">
+
+            El margen crea espacio alrededor del borde,
+            separando este elemento de los demás.
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>4. Partes del Box Model</h2>
+
+        <ul>
+
+            <li><strong>Content:</strong> Contenido del elemento.</li>
+
+            <li><strong>Padding:</strong> Espacio entre el contenido y el borde.</li>
+
+            <li><strong>Border:</strong> Línea que rodea el contenido y el padding.</li>
+
+            <li><strong>Margin:</strong> Espacio exterior que separa el elemento de otros.</li>
+
+        </ul>
+
+    </section>
+
+</body>
+
+</html>
