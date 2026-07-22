@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 15 - CSS Text
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 15 - CSS Text</title>
+
+    <style>
+
+        /* =====================================================
+           Estilos generales
+        ====================================================== */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:#eef2f7;
+            color:#333;
+            margin:20px;
+        }
+
+        h1{
+            text-align:center;
+            color:navy;
+        }
+
+        h2{
+            color:darkred;
+            margin-top:35px;
+        }
+
+        section{
+            background:white;
+            padding:20px;
+            margin-bottom:25px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.15);
+        }
+
+        /* =====================================================
+           Color del texto
+        ====================================================== */
+
+        .color-nombre{
+            color:red;
+        }
+
+        .color-hex{
+            color:#0066cc;
+        }
+
+        .color-rgb{
+            color:rgb(0,150,80);
+        }
+
+        .fondo{
+            background:black;
+            color:white;
+            padding:10px;
+        }
+
+        /* =====================================================
+           Alineación del texto
+        ====================================================== */
+
+        .left{
+            text-align:left;
+        }
+
+        .center{
+            text-align:center;
+        }
+
+        .right{
+            text-align:right;
+        }
+
+        .justify{
+            text-align:justify;
+        }
+
+        .last{
+            text-align:justify;
+            text-align-last:center;
+        }
+
+        /* =====================================================
+           Dirección del texto
+        ====================================================== */
+
+        .rtl{
+            direction:rtl;
+            unicode-bidi:bidi-override;
+        }
+
+        /* =====================================================
+           Decoración del texto
+        ====================================================== */
+
+        .underline{
+            text-decoration:underline;
+        }
+
+        .overline{
+            text-decoration:overline;
+        }
+
+        .line{
+            text-decoration:line-through;
+        }
+
+        .wavy{
+            text-decoration:underline red wavy 3px;
+        }
+
+        a{
+            text-decoration:none;
+            color:blue;
+        }
+
+        /* =====================================================
+           Transformación del texto
+        ====================================================== */
+
+        .upper{
+            text-transform:uppercase;
+        }
+
+        .lower{
+            text-transform:lowercase;
+        }
+
+        .capitalize{
+            text-transform:capitalize;
+        }
+
+        /* =====================================================
+           Espaciado del texto
+        ====================================================== */
+
+        .indent{
+            text-indent:50px;
+        }
+
+        .letters{
+            letter-spacing:5px;
+        }
+
+        .words{
+            word-spacing:12px;
+        }
+
+        .lines{
+            line-height:2;
+        }
+
+        .nowrap{
+            white-space:nowrap;
+        }
+
+        /* =====================================================
+           Sombra del texto
+        ====================================================== */
+
+        .shadow1{
+            text-shadow:2px 2px;
+        }
+
+        .shadow2{
+            text-shadow:2px 2px red;
+        }
+
+        .shadow3{
+            text-shadow:2px 2px 5px blue;
+        }
+
+        .shadow4{
+            color:white;
+            background:#222;
+            padding:10px;
+            text-shadow:1px 1px 2px black,
+                        0 0 20px blue,
+                        0 0 5px red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 15 - CSS Text</h1>
+
+    <section>
+
+        <h2>1. Color del texto</h2>
+
+        <p class="color-nombre">Color usando nombre.</p>
+
+        <p class="color-hex">Color usando HEX.</p>
+
+        <p class="color-rgb">Color usando RGB.</p>
+
+        <p class="fondo">
+            Texto blanco sobre fondo negro.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>2. Alineación</h2>
+
+        <p class="left">Texto alineado a la izquierda.</p>
+
+        <p class="center">Texto centrado.</p>
+
+        <p class="right">Texto alineado a la derecha.</p>
+
+        <p class="justify">
+            CSS permite justificar el texto para que ambos márgenes
+            queden alineados, como sucede en periódicos y revistas.
+        </p>
+
+        <p class="last">
+            Este párrafo utiliza text-align-last para centrar
+            únicamente la última línea del texto.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>3. Dirección del texto</h2>
+
+        <p class="rtl">
+            Texto mostrado de derecha a izquierda.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>4. Decoración del texto</h2>
+
+        <p class="underline">Texto subrayado.</p>
+
+        <p class="overline">Texto con línea superior.</p>
+
+        <p class="line">Texto tachado.</p>
+
+        <p class="wavy">Subrayado ondulado.</p>
+
+        <a href="#">Enlace sin subrayado.</a>
+
+    </section>
+
+    <section>
+
+        <h2>5. Transformación</h2>
+
+        <p class="upper">texto convertido a mayúsculas.</p>
+
+        <p class="lower">TEXTO CONVERTIDO A MINÚSCULAS.</p>
+
+        <p class="capitalize">
+            cada palabra comienza con mayúscula.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>6. Espaciado</h2>
+
+        <p class="indent">
+            Este párrafo utiliza sangría en la primera línea.
+        </p>
+
+        <p class="letters">
+            Espaciado entre letras.
+        </p>
+
+        <p class="words">
+            Espaciado entre palabras.
+        </p>
+
+        <p class="lines">
+            Primera línea.<br>
+            Segunda línea.<br>
+            Tercera línea con mayor separación.
+        </p>
+
+        <p class="nowrap">
+            Este texto no se dividirá en varias líneas aunque el espacio disponible sea pequeño.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>7. Text Shadow</h2>
+
+        <h3 class="shadow1">
+            Sombra simple
+        </h3>
+
+        <h3 class="shadow2">
+            Sombra con color
+        </h3>
+
+        <h3 class="shadow3">
+            Sombra con desenfoque
+        </h3>
+
+        <h3 class="shadow4">
+            Múltiples sombras
+        </h3>
+
+    </section>
+
+</body>
+
+</html>
