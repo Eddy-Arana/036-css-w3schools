@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 12 - CSS Height and Width
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 12 - CSS Height and Width</title>
+
+    <style>
+
+        /* =====================================================
+           Estilos generales
+        ====================================================== */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #eef2f7;
+            margin: 20px;
+        }
+
+        h1{
+            text-align: center;
+            color: navy;
+        }
+
+        h2{
+            color: darkred;
+        }
+
+        section{
+            background-color: white;
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.15);
+        }
+
+        /* =====================================================
+           Estilo base para los ejemplos
+        ====================================================== */
+
+        .caja{
+            background-color: powderblue;
+            border: 2px solid steelblue;
+            padding: 10px;
+            margin-top: 15px;
+        }
+
+        /* =====================================================
+           Width y Height
+        ====================================================== */
+
+        .tamano1{
+
+            width: 50%;
+            height: 120px;
+
+        }
+
+        .tamano2{
+
+            width: 400px;
+            height: 100px;
+
+        }
+
+        /* =====================================================
+           Width automático
+        ====================================================== */
+
+        .auto{
+
+            width: auto;
+            height: auto;
+
+        }
+
+        /* =====================================================
+           Min Width y Max Width
+        ====================================================== */
+
+        .maxwidth{
+
+            width: 100%;
+            max-width: 600px;
+
+            background-color: lightgreen;
+            border: 2px solid green;
+            padding: 15px;
+
+        }
+
+        .minwidth{
+
+            min-width: 300px;
+
+            background-color: lightyellow;
+            border: 2px solid orange;
+            padding: 15px;
+
+        }
+
+        /* =====================================================
+           Min Height y Max Height
+        ====================================================== */
+
+        .minheight{
+
+            min-height: 120px;
+
+            background-color: lavender;
+            border: 2px solid purple;
+            padding: 15px;
+
+        }
+
+        .maxheight{
+
+            max-height: 120px;
+
+            overflow: auto;
+
+            background-color: mistyrose;
+            border: 2px solid crimson;
+            padding: 15px;
+
+        }
+
+        /* =====================================================
+           Inherit
+        ====================================================== */
+
+        .padre{
+
+            width: 80%;
+            height: 120px;
+
+            border: 2px solid gray;
+            padding: 10px;
+
+        }
+
+        .hijo{
+
+            width: inherit;
+            height: inherit;
+
+            background-color: aliceblue;
+            border: 2px dashed steelblue;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 12 - CSS Height and Width</h1>
+
+    <section>
+
+        <h2>1. Width y Height</h2>
+
+        <div class="caja tamano1">
+
+            width: 50%<br>
+            height: 120px
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>2. Width y Height en píxeles</h2>
+
+        <div class="caja tamano2">
+
+            width: 400px<br>
+            height: 100px
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>3. Valores automáticos</h2>
+
+        <div class="caja auto">
+
+            Este elemento utiliza
+            <strong>width: auto;</strong> y
+            <strong>height: auto;</strong>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>4. Max Width</h2>
+
+        <div class="maxwidth">
+
+            El ancho ocupa el 100% del espacio disponible,
+            pero nunca supera los 600px.
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>5. Min Width</h2>
+
+        <div class="minwidth">
+
+            Este elemento nunca tendrá menos de
+            300px de ancho.
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>6. Min Height</h2>
+
+        <div class="minheight">
+
+            Este cuadro siempre tendrá
+            una altura mínima de 120px.
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>7. Max Height</h2>
+
+        <div class="maxheight">
+
+            Este elemento tiene una altura máxima de
+            120px.
+
+            <br><br>
+
+            Si el contenido sobrepasa ese tamaño,
+            aparecerá una barra de desplazamiento
+            gracias a la propiedad
+            <strong>overflow: auto;</strong>
+
+            <br><br>
+
+            Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Doloribus, provident
+            laboriosam, pariatur dicta aliquam
+            perspiciatis quas consequatur.
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>8. Width y Height heredados</h2>
+
+        <div class="padre">
+
+            Contenedor padre
+
+            <div class="hijo">
+
+                Este elemento hereda el ancho y la
+                altura mediante
+                <strong>inherit</strong>.
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
