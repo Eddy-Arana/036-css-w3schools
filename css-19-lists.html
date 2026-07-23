@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 19 - CSS Lists
+         Autor: Tu Nombre
+         Curso: CSS - W3Schools
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 19 - CSS Lists</title>
+
+    <style>
+
+        /* =====================================================
+           ESTILOS GENERALES
+        ====================================================== */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f4f4f4;
+            margin:30px;
+            color:#333;
+        }
+
+        h1{
+            text-align:center;
+            color:#0d6efd;
+        }
+
+        h2{
+            color:#198754;
+            border-bottom:2px solid #198754;
+            padding-bottom:5px;
+        }
+
+        section{
+            background:white;
+            padding:20px;
+            margin-bottom:25px;
+            border-radius:10px;
+            box-shadow:0px 0px 8px rgba(0,0,0,.15);
+        }
+
+        /* =====================================================
+           LIST-STYLE-TYPE
+        ====================================================== */
+
+        ul.circle{
+            list-style-type:circle;
+        }
+
+        ul.square{
+            list-style-type:square;
+        }
+
+        ul.disc{
+            list-style-type:disc;
+        }
+
+        ol.roman{
+            list-style-type:upper-roman;
+        }
+
+        ol.alpha{
+            list-style-type:lower-alpha;
+        }
+
+        ol.decimal{
+            list-style-type:decimal;
+        }
+
+        /* =====================================================
+           LIST-STYLE-POSITION
+        ====================================================== */
+
+        ul.outside{
+            list-style-position:outside;
+            border:1px solid gray;
+            padding:20px;
+        }
+
+        ul.inside{
+            list-style-position:inside;
+            border:1px solid gray;
+            padding:20px;
+        }
+
+        /* =====================================================
+           REMOVER VIÑETAS
+        ====================================================== */
+
+        ul.none{
+            list-style-type:none;
+            margin:0;
+            padding:0;
+        }
+
+        /* =====================================================
+           LIST-STYLE SHORTHAND
+        ====================================================== */
+
+        ul.short{
+            list-style:square inside;
+            background:#d9ecff;
+            padding:20px;
+        }
+
+        /* =====================================================
+           LISTAS CON COLOR
+        ====================================================== */
+
+        ol.color{
+            background:#ffb3b3;
+            padding:20px;
+        }
+
+        ol.color li{
+            background:#ffe5e5;
+            color:darkred;
+            margin:8px;
+            padding:10px;
+        }
+
+        ul.color{
+            background:#bde0fe;
+            padding:20px;
+        }
+
+        ul.color li{
+            background:#edf6ff;
+            color:#003566;
+            margin:8px;
+            padding:10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         TÍTULO
+    ====================================================== -->
+
+    <h1>Lección 19 - CSS Lists</h1>
+
+    <p>
+        CSS permite personalizar completamente las listas de HTML.
+        Podemos cambiar las viñetas, los números, su posición,
+        eliminar los marcadores y aplicar colores o estilos.
+    </p>
+
+    <!-- =====================================================
+         LIST-STYLE-TYPE
+    ====================================================== -->
+
+    <section>
+
+        <h2>1. list-style-type</h2>
+
+        <p><strong>Lista con círculo:</strong></p>
+
+        <ul class="circle">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <p><strong>Lista con cuadrado:</strong></p>
+
+        <ul class="square">
+            <li>Python</li>
+            <li>Java</li>
+            <li>C#</li>
+        </ul>
+
+        <p><strong>Lista con viñeta normal:</strong></p>
+
+        <ul class="disc">
+            <li>Windows</li>
+            <li>Linux</li>
+            <li>macOS</li>
+        </ul>
+
+        <p><strong>Lista romana:</strong></p>
+
+        <ol class="roman">
+            <li>Capítulo I</li>
+            <li>Capítulo II</li>
+            <li>Capítulo III</li>
+        </ol>
+
+        <p><strong>Lista alfabética:</strong></p>
+
+        <ol class="alpha">
+            <li>Opción A</li>
+            <li>Opción B</li>
+            <li>Opción C</li>
+        </ol>
+
+        <p><strong>Lista decimal:</strong></p>
+
+        <ol class="decimal">
+            <li>Paso 1</li>
+            <li>Paso 2</li>
+            <li>Paso 3</li>
+        </ol>
+
+    </section>
+
+    <!-- =====================================================
+         LIST-STYLE-POSITION
+    ====================================================== -->
+
+    <section>
+
+        <h2>2. list-style-position</h2>
+
+        <h3>Outside (por defecto)</h3>
+
+        <ul class="outside">
+            <li>Las viñetas quedan fuera del contenido.</li>
+            <li>El texto inicia alineado.</li>
+        </ul>
+
+        <h3>Inside</h3>
+
+        <ul class="inside">
+            <li>Las viñetas forman parte del contenido.</li>
+            <li>El texto se desplaza junto con ellas.</li>
+        </ul>
+
+    </section>
+
+    <!-- =====================================================
+         REMOVER MARCADORES
+    ====================================================== -->
+
+    <section>
+
+        <h2>3. Eliminar viñetas</h2>
+
+        <ul class="none">
+            <li>Inicio</li>
+            <li>Servicios</li>
+            <li>Contacto</li>
+        </ul>
+
+    </section>
+
+    <!-- =====================================================
+         SHORTHAND
+    ====================================================== -->
+
+    <section>
+
+        <h2>4. list-style (Shorthand)</h2>
+
+        <ul class="short">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+    </section>
+
+    <!-- =====================================================
+         LISTAS CON COLORES
+    ====================================================== -->
+
+    <section>
+
+        <h2>5. Listas con colores</h2>
+
+        <h3>Lista Ordenada</h3>
+
+        <ol class="color">
+            <li>Preparar materiales</li>
+            <li>Escribir código</li>
+            <li>Probar la página</li>
+        </ol>
+
+        <h3>Lista No Ordenada</h3>
+
+        <ul class="color">
+            <li>Computadora</li>
+            <li>Internet</li>
+            <li>Visual Studio Code</li>
+        </ul>
+
+    </section>
+
+    <!-- =====================================================
+         RESUMEN
+    ====================================================== -->
+
+    <section>
+
+        <h2>Resumen</h2>
+
+        <ul>
+
+            <li><strong>list-style-type:</strong> cambia el tipo de marcador.</li>
+
+            <li><strong>list-style-position:</strong> coloca la viñeta dentro o fuera.</li>
+
+            <li><strong>list-style-image:</strong> permite usar una imagen como marcador.</li>
+
+            <li><strong>list-style:</strong> propiedad abreviada.</li>
+
+            <li><strong>list-style-type: none;</strong> elimina las viñetas.</li>
+
+        </ul>
+
+    </section>
+
+</body>
+
+</html>
