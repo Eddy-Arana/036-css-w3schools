@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 20 - CSS Tables
+         Autor: Tu Nombre
+         Curso: CSS - W3Schools
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 20 - CSS Tables</title>
+
+    <style>
+
+        /* =====================================================
+           ESTILOS GENERALES
+        ====================================================== */
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#f4f4f4;
+            margin:30px;
+            color:#333;
+        }
+
+        h1{
+            text-align:center;
+            color:#0d6efd;
+        }
+
+        h2{
+            color:#198754;
+            border-bottom:2px solid #198754;
+            padding-bottom:5px;
+        }
+
+        section{
+            background:white;
+            padding:20px;
+            margin-bottom:30px;
+            border-radius:10px;
+            box-shadow:0px 0px 8px rgba(0,0,0,.15);
+        }
+
+        /* =====================================================
+           TABLA GENERAL
+        ====================================================== */
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:15px;
+        }
+
+        th,td{
+            border:1px solid gray;
+            padding:10px;
+        }
+
+        th{
+            background:#0d6efd;
+            color:white;
+        }
+
+        /* =====================================================
+           BORDER SPACING
+        ====================================================== */
+
+        table.spacing{
+            border-collapse:separate;
+            border-spacing:10px;
+        }
+
+        /* =====================================================
+           ALINEACIÓN
+        ====================================================== */
+
+        table.align td{
+            text-align:center;
+            vertical-align:middle;
+            height:50px;
+        }
+
+        table.align th{
+            text-align:left;
+        }
+
+        /* =====================================================
+           HOVER
+        ====================================================== */
+
+        table.hover tr:hover{
+            background:lightyellow;
+        }
+
+        /* =====================================================
+           ZEBRA STRIPES
+        ====================================================== */
+
+        table.zebra tr:nth-child(even){
+            background:#f2f2f2;
+        }
+
+        table.zebra tr:hover{
+            background:#d6ecff;
+        }
+
+        /* =====================================================
+           TABLA RESPONSIVE
+        ====================================================== */
+
+        .table-container{
+            overflow-x:auto;
+        }
+
+        table.responsive{
+            min-width:900px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         TÍTULO
+    ====================================================== -->
+
+    <h1>Lección 20 - CSS Tables</h1>
+
+    <p>
+        CSS permite mejorar considerablemente la apariencia de las tablas
+        mediante bordes, colores, alineación, espacios, efectos al pasar
+        el mouse y diseño adaptable.
+    </p>
+
+    <!-- =====================================================
+         BORDES
+    ====================================================== -->
+
+    <section>
+
+        <h2>1. Bordes de la tabla</h2>
+
+        <table>
+
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>País</th>
+            </tr>
+
+            <tr>
+                <td>Juan</td>
+                <td>Pérez</td>
+                <td>Guatemala</td>
+            </tr>
+
+            <tr>
+                <td>María</td>
+                <td>López</td>
+                <td>México</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- =====================================================
+         BORDER COLLAPSE
+    ====================================================== -->
+
+    <section>
+
+        <h2>2. border-collapse</h2>
+
+        <p>
+            La propiedad <strong>border-collapse: collapse;</strong>
+            une los bordes de la tabla para que se vea como un solo borde.
+        </p>
+
+    </section>
+
+    <!-- =====================================================
+         BORDER SPACING
+    ====================================================== -->
+
+    <section>
+
+        <h2>3. border-spacing</h2>
+
+        <table class="spacing">
+
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+
+            <tr>
+                <td>Teclado</td>
+                <td>Q250</td>
+            </tr>
+
+            <tr>
+                <td>Mouse</td>
+                <td>Q150</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- =====================================================
+         WIDTH Y HEIGHT
+    ====================================================== -->
+
+    <section>
+
+        <h2>4. Width y Height</h2>
+
+        <p>
+            Esta tabla ocupa el 100% del ancho disponible y cada celda
+            tiene padding para mejorar la lectura.
+        </p>
+
+    </section>
+
+    <!-- =====================================================
+         ALINEACIÓN
+    ====================================================== -->
+
+    <section>
+
+        <h2>5. text-align y vertical-align</h2>
+
+        <table class="align">
+
+            <tr>
+                <th>Nombre</th>
+                <th>Puntos</th>
+            </tr>
+
+            <tr>
+                <td>Carlos</td>
+                <td>95</td>
+            </tr>
+
+            <tr>
+                <td>Ana</td>
+                <td>88</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- =====================================================
+         HOVER
+    ====================================================== -->
+
+    <section>
+
+        <h2>6. Hover en filas</h2>
+
+        <table class="hover">
+
+            <tr>
+                <th>Curso</th>
+                <th>Estado</th>
+            </tr>
+
+            <tr>
+                <td>HTML</td>
+                <td>Finalizado</td>
+            </tr>
+
+            <tr>
+                <td>CSS</td>
+                <td>En proceso</td>
+            </tr>
+
+            <tr>
+                <td>JavaScript</td>
+                <td>Pendiente</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- =====================================================
+         ZEBRA STRIPES
+    ====================================================== -->
+
+    <section>
+
+        <h2>7. Zebra Stripes</h2>
+
+        <table class="zebra">
+
+            <tr>
+                <th>Empleado</th>
+                <th>Departamento</th>
+            </tr>
+
+            <tr>
+                <td>José</td>
+                <td>Ventas</td>
+            </tr>
+
+            <tr>
+                <td>Laura</td>
+                <td>Marketing</td>
+            </tr>
+
+            <tr>
+                <td>Pedro</td>
+                <td>Sistemas</td>
+            </tr>
+
+            <tr>
+                <td>Sofía</td>
+                <td>Finanzas</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- =====================================================
+         TABLA RESPONSIVE
+    ====================================================== -->
+
+    <section>
+
+        <h2>8. Tabla Responsive</h2>
+
+        <p>
+            Si la pantalla es pequeña aparecerá una barra de desplazamiento
+            horizontal.
+        </p>
+
+        <div class="table-container">
+
+            <table class="responsive">
+
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Nota 1</th>
+                    <th>Nota 2</th>
+                    <th>Nota 3</th>
+                    <th>Nota 4</th>
+                    <th>Nota 5</th>
+                    <th>Nota 6</th>
+                    <th>Nota 7</th>
+                    <th>Nota 8</th>
+                </tr>
+
+                <tr>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>80</td>
+                    <td>82</td>
+                    <td>90</td>
+                    <td>88</td>
+                    <td>95</td>
+                    <td>91</td>
+                    <td>84</td>
+                    <td>96</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         RESUMEN
+    ====================================================== -->
+
+    <section>
+
+        <h2>Resumen</h2>
+
+        <ul>
+
+            <li><strong>border:</strong> agrega bordes.</li>
+
+            <li><strong>border-collapse:</strong> une los bordes.</li>
+
+            <li><strong>border-spacing:</strong> separa las celdas.</li>
+
+            <li><strong>padding:</strong> agrega espacio interno.</li>
+
+            <li><strong>width / height:</strong> controla el tamaño de la tabla.</li>
+
+            <li><strong>text-align:</strong> alinea horizontalmente.</li>
+
+            <li><strong>vertical-align:</strong> alinea verticalmente.</li>
+
+            <li><strong>:hover:</strong> resalta filas al pasar el mouse.</li>
+
+            <li><strong>nth-child(even):</strong> crea el efecto Zebra.</li>
+
+            <li><strong>overflow-x:auto;</strong> hace la tabla responsive.</li>
+
+        </ul>
+
+    </section>
+
+</body>
+
+</html>
