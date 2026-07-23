@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 16 - CSS Fonts
+         Parte 1
+         Font Family y Web Safe Fonts
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 16 - CSS Fonts</title>
+
+    <style>
+
+        /* =====================================================
+           ESTILOS GENERALES
+        ====================================================== */
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+
+            font-family:Arial, Helvetica, sans-serif;
+            background:#f4f6f9;
+            color:#333;
+            line-height:1.7;
+
+        }
+
+        header{
+
+            background:#1f4e79;
+            color:white;
+            padding:30px;
+            text-align:center;
+
+        }
+
+        header h1{
+
+            margin-bottom:10px;
+
+        }
+
+        main{
+
+            width:90%;
+            max-width:1200px;
+            margin:40px auto;
+
+        }
+
+        section{
+
+            background:white;
+            padding:25px;
+            margin-bottom:30px;
+            border-radius:12px;
+            box-shadow:0 0 10px rgba(0,0,0,.10);
+
+        }
+
+        h2{
+
+            color:#1f4e79;
+            margin-bottom:15px;
+
+        }
+
+        h3{
+
+            color:#0d6efd;
+            margin-top:25px;
+            margin-bottom:10px;
+
+        }
+
+        p{
+
+            margin-bottom:15px;
+
+        }
+
+        code{
+
+            background:#ececec;
+            padding:3px 6px;
+            border-radius:4px;
+
+        }
+
+        hr{
+
+            margin:25px 0;
+
+        }
+
+        /* =====================================================
+           FONT FAMILY
+        ====================================================== */
+
+        .times{
+
+            font-family:"Times New Roman", Times, serif;
+
+        }
+
+        .arial{
+
+            font-family:Arial, Helvetica, sans-serif;
+
+        }
+
+        .courier{
+
+            font-family:"Courier New", Courier, monospace;
+
+        }
+
+        .cursive{
+
+            font-family:"Brush Script MT", cursive;
+            font-size:30px;
+
+        }
+
+        .fantasy{
+
+            font-family:Papyrus, fantasy;
+            font-size:24px;
+
+        }
+
+        /* =====================================================
+           TARJETAS
+        ====================================================== */
+
+        .card{
+
+            background:#f8f9fa;
+            border-left:6px solid #1f4e79;
+            padding:20px;
+            margin-top:15px;
+            border-radius:8px;
+
+        }
+
+        .font-box{
+
+            background:#eef6ff;
+            padding:18px;
+            margin:15px 0;
+            border-radius:8px;
+
+        }
+
+        table{
+
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+
+        }
+
+        table,
+        th,
+        td{
+
+            border:1px solid #999;
+
+        }
+
+        th{
+
+            background:#1f4e79;
+            color:white;
+            padding:12px;
+
+        }
+
+        td{
+
+            padding:12px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Lección 16 - CSS Fonts</h1>
+
+    <p>
+        Aprendiendo a utilizar fuentes en CSS.
+    </p>
+
+</header>
+
+<main>
+
+<!-- =====================================================
+     ¿QUÉ ES CSS FONTS?
+====================================================== -->
+
+<section>
+
+<h2>¿Qué son las fuentes en CSS?</h2>
+
+<p>
+
+Las fuentes permiten cambiar la apariencia del texto de una página web.
+
+</p>
+
+<p>
+
+Con CSS podemos controlar:
+
+</p>
+
+<ul>
+
+<li>Tipo de fuente.</li>
+<li>Tamaño.</li>
+<li>Grosor.</li>
+<li>Estilo.</li>
+<li>Variantes.</li>
+
+</ul>
+
+<div class="card">
+
+<strong>Importancia:</strong>
+
+Elegir una buena fuente mejora la lectura y la apariencia profesional del sitio web.
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     FONT FAMILY
+====================================================== -->
+
+<section>
+
+<h2>Propiedad font-family</h2>
+
+<p>
+
+La propiedad
+<code>font-family</code>
+define el tipo de letra que utilizará un elemento.
+
+</p>
+
+<div class="font-box times">
+
+<h3>Times New Roman (Serif)</h3>
+
+<p>
+
+Este es un ejemplo con la fuente Times New Roman.
+
+</p>
+
+</div>
+
+<div class="font-box arial">
+
+<h3>Arial (Sans-serif)</h3>
+
+<p>
+
+Este es un ejemplo con la fuente Arial.
+
+</p>
+
+</div>
+
+<div class="font-box courier">
+
+<h3>Courier New (Monospace)</h3>
+
+<p>
+
+Este es un ejemplo con la fuente Courier New.
+
+</p>
+
+</div>
+
+<div class="font-box cursive">
+
+<h3>Brush Script MT (Cursive)</h3>
+
+<p>
+
+Este es un ejemplo con la fuente Brush Script MT.
+
+</p>
+
+</div>
+
+<div class="font-box fantasy">
+
+<h3>Papyrus (Fantasy)</h3>
+
+<p>
+
+Este es un ejemplo con la fuente Papyrus .
+
+</p>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     WEB SAFE FONTS
+====================================================== -->
+
+<section>
+
+<h2>Web Safe Fonts</h2>
+
+<p>
+
+Las Web Safe Fonts son fuentes que prácticamente todos los sistemas operativos tienen instaladas.
+
+</p>
+
+<p>
+
+Siempre es recomendable utilizar fuentes de respaldo (Fallback Fonts).
+
+</p>
+
+<pre>
+
+font-family: Arial, Helvetica, sans-serif;
+
+</pre>
+
+<table>
+
+<tr>
+
+<th>Familia</th>
+<th>Ejemplo</th>
+
+</tr>
+
+<tr>
+
+<td>Arial</td>
+
+<td style="font-family:Arial, Helvetica, sans-serif;">
+
+Texto utilizando Arial
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Verdana</td>
+
+<td style="font-family:Verdana, Geneva, sans-serif;">
+
+Texto utilizando Verdana
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Tahoma</td>
+
+<td style="font-family:Tahoma, Geneva, sans-serif;">
+
+Texto utilizando Tahoma
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Georgia</td>
+
+<td style="font-family:Georgia, serif;">
+
+Texto utilizando Georgia
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Courier New</td>
+
+<td style="font-family:'Courier New', monospace;">
+
+Texto utilizando Courier New
+
+</td>
+
+</tr>
+
+</table>
+
+</section>
+<!-- =====================================================
+     FONT STYLE
+====================================================== -->
+
+<section>
+
+<h2>Propiedad font-style</h2>
+
+<p>
+
+La propiedad <code>font-style</code> permite cambiar el estilo de la fuente.
+
+</p>
+
+<style>
+
+.normal{
+    font-style:normal;
+}
+
+.italic{
+    font-style:italic;
+}
+
+.oblique{
+    font-style:oblique;
+}
+
+</style>
+
+<div class="font-box">
+
+<p class="normal">
+
+Texto con estilo <strong>normal</strong>.
+
+</p>
+
+<p class="italic">
+
+Texto con estilo <strong>italic</strong>.
+
+</p>
+
+<p class="oblique">
+
+Texto con estilo <strong>oblique</strong>.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     FONT WEIGHT
+====================================================== -->
+
+<section>
+
+<h2>Propiedad font-weight</h2>
+
+<p>
+
+La propiedad <code>font-weight</code> controla el grosor del texto.
+
+</p>
+
+<style>
+
+.light{
+    font-weight:300;
+}
+
+.normal-weight{
+    font-weight:400;
+}
+
+.bold{
+    font-weight:700;
+}
+
+.extra-bold{
+    font-weight:900;
+}
+
+</style>
+
+<div class="font-box">
+
+<p class="light">
+
+Peso 300 (Light)
+
+</p>
+
+<p class="normal-weight">
+
+Peso 400 (Normal)
+
+</p>
+
+<p class="bold">
+
+Peso 700 (Bold)
+
+</p>
+
+<p class="extra-bold">
+
+Peso 900 (Extra Bold)
+
+</p>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     FONT VARIANT
+====================================================== -->
+
+<section>
+
+<h2>Propiedad font-variant</h2>
+
+<p>
+
+La propiedad <code>font-variant</code> permite mostrar el texto en formato
+<strong>Small Caps</strong>.
+
+</p>
+
+<style>
+
+.small-caps{
+
+    font-variant:small-caps;
+    font-size:24px;
+
+}
+
+</style>
+
+<div class="font-box">
+
+<p>
+
+Texto normal utilizando la fuente predeterminada.
+
+</p>
+
+<p class="small-caps">
+
+Texto convertido a Small Caps mediante CSS.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     FONT SIZE
+====================================================== -->
+
+<section>
+
+<h2>Propiedad font-size</h2>
+
+<p>
+
+La propiedad <code>font-size</code> define el tamaño del texto.
+
+</p>
+
+<style>
+
+.size-px{
+
+    font-size:32px;
+
+}
+
+.size-em{
+
+    font-size:2em;
+
+}
+
+.size-rem{
+
+    font-size:2rem;
+
+}
+
+.size-vw{
+
+    font-size:3vw;
+
+}
+
+</style>
+
+<h3>Tamaño utilizando píxeles (px)</h3>
+
+<p class="size-px">
+
+Este texto mide 32px.
+
+</p>
+
+<hr>
+
+<h3>Tamaño utilizando em</h3>
+
+<p class="size-em">
+
+Este texto utiliza 2em.
+
+</p>
+
+<hr>
+
+<h3>Tamaño utilizando rem</h3>
+
+<p class="size-rem">
+
+Este texto utiliza 2rem.
+
+</p>
+
+<hr>
+
+<h3>Tamaño utilizando vw</h3>
+
+<p class="size-vw">
+
+Este texto cambia de tamaño según el ancho del navegador.
+
+</p>
+
+</section>
+
+<!-- =====================================================
+     COMPARACIÓN DE UNIDADES
+====================================================== -->
+
+<section>
+
+<h2>Comparación de unidades</h2>
+
+<table>
+
+<tr>
+
+<th>Unidad</th>
+<th>Descripción</th>
+
+</tr>
+
+<tr>
+
+<td>px</td>
+
+<td>
+
+Unidad fija en píxeles.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>em</td>
+
+<td>
+
+Relativa al tamaño de la fuente del elemento padre.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>rem</td>
+
+<td>
+
+Relativa al tamaño de la fuente del elemento HTML.
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>vw</td>
+
+<td>
+
+Relativa al ancho de la ventana del navegador.
+
+</td>
+
+</tr>
+
+</table>
+
+</section>
