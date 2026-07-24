@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 22 - CSS Max Width
+         Autor: Tu Nombre
+         Descripción:
+         Demostración de width y max-width.
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 22 - CSS Max Width</title>
+
+    <style>
+
+        /* ==========================================
+           ESTILOS GENERALES
+        ========================================== */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f4f4f4;
+            margin:30px;
+            line-height:1.8;
+        }
+
+        h1{
+            color:#0b5394;
+        }
+
+        h2{
+            color:#1c4587;
+            margin-top:40px;
+        }
+
+        section{
+            background:white;
+            padding:20px;
+            margin-bottom:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.1);
+        }
+
+        /* ==========================================
+           WIDTH
+        ========================================== */
+
+        .width{
+            width:600px;
+            margin:auto;
+            border:3px solid #4CAF50;
+            background:#E8F5E9;
+            padding:15px;
+        }
+
+        /* ==========================================
+           MAX WIDTH
+        ========================================== */
+
+        .max-width{
+            max-width:600px;
+            margin:auto;
+            border:3px solid #2196F3;
+            background:#E3F2FD;
+            padding:15px;
+        }
+
+        /* ==========================================
+           CONTENEDORES RESPONSIVOS
+        ========================================== */
+
+        .contenedor{
+            max-width:900px;
+            margin:auto;
+            background:#FFF3CD;
+            border:2px dashed orange;
+            padding:20px;
+        }
+
+        img{
+            max-width:100%;
+            height:auto;
+            border-radius:10px;
+        }
+
+        /* ==========================================
+           RESUMEN
+        ========================================== */
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+        }
+
+        table, th, td{
+            border:1px solid #999;
+        }
+
+        th{
+            background:#0b5394;
+            color:white;
+        }
+
+        th, td{
+            padding:10px;
+            text-align:left;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 22 - CSS Max Width</h1>
+
+    <p>
+        La propiedad <strong>max-width</strong> establece el ancho máximo que puede
+        tener un elemento. Si la pantalla es más pequeña, el elemento se adapta
+        automáticamente sin provocar desplazamiento horizontal.
+    </p>
+
+    <!-- ==========================================
+         WIDTH
+    =========================================== -->
+
+    <section>
+
+        <h2>Ejemplo usando width</h2>
+
+        <div class="width">
+
+            Este contenedor tiene un
+            <strong>width:600px</strong>.
+            Si la ventana del navegador es menor a 600px,
+            puede aparecer una barra de desplazamiento horizontal.
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         MAX WIDTH
+    =========================================== -->
+
+    <section>
+
+        <h2>Ejemplo usando max-width</h2>
+
+        <div class="max-width">
+
+            Este contenedor utiliza
+            <strong>max-width:600px</strong>.
+            Puede reducir su tamaño automáticamente cuando la pantalla es pequeña,
+            haciendo la página mucho más adaptable.
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         CONTENEDOR RESPONSIVO
+    =========================================== -->
+
+    <section>
+
+        <h2>Contenedor Responsivo</h2>
+
+        <div class="contenedor">
+
+            <p>
+
+                Este contenedor utiliza
+                <strong>max-width:900px</strong>.
+                En pantallas grandes mantiene un ancho máximo,
+                mientras que en pantallas pequeñas ocupa casi todo el espacio disponible.
+
+            </p>
+
+            <img src="https://picsum.photos/900/300"
+                 alt="Imagen Responsiva">
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         COMPARACIÓN
+    =========================================== -->
+
+    <section>
+
+        <h2>Diferencias entre width y max-width</h2>
+
+        <table>
+
+            <tr>
+
+                <th>Propiedad</th>
+
+                <th>Descripción</th>
+
+            </tr>
+
+            <tr>
+
+                <td><strong>width</strong></td>
+
+                <td>Define un ancho fijo para el elemento.</td>
+
+            </tr>
+
+            <tr>
+
+                <td><strong>max-width</strong></td>
+
+                <td>Define el ancho máximo permitido, permitiendo que el elemento se reduzca cuando sea necesario.</td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- ==========================================
+         RESUMEN
+    =========================================== -->
+
+    <section>
+
+        <h2>Resumen</h2>
+
+        <ul>
+
+            <li><strong>width</strong> establece un ancho fijo.</li>
+
+            <li><strong>max-width</strong> establece el ancho máximo permitido.</li>
+
+            <li>Es muy útil para crear diseños responsivos.</li>
+
+            <li>Evita barras de desplazamiento horizontales en pantallas pequeñas.</li>
+
+            <li>Se suele combinar con <strong>margin:auto</strong> para centrar elementos.</li>
+
+        </ul>
+
+    </section>
+
+</body>
+
+</html>
