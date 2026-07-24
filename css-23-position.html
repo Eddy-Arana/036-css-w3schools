@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 23 - CSS Position
+         Autor: Tu Nombre
+         Descripción:
+         Demostración de las diferentes posiciones en CSS.
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 23 - CSS Position</title>
+
+    <style>
+
+        /* ==========================================
+           ESTILOS GENERALES
+        ========================================== */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f4f4f4;
+            margin:30px;
+            line-height:1.7;
+        }
+
+        h1{
+            color:#0b5394;
+        }
+
+        h2{
+            color:#1c4587;
+            margin-top:45px;
+        }
+
+        section{
+            background:white;
+            padding:20px;
+            margin-bottom:35px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.1);
+        }
+
+        /* ==========================================
+           POSITION STATIC
+        ========================================== */
+
+        .static{
+            position:static;
+            border:3px solid green;
+            padding:15px;
+            background:#E8F5E9;
+        }
+
+        /* ==========================================
+           POSITION RELATIVE
+        ========================================== */
+
+        .relative{
+            position:relative;
+            left:30px;
+            border:3px solid blue;
+            padding:15px;
+            background:#E3F2FD;
+        }
+
+        /* ==========================================
+           POSITION ABSOLUTE
+        ========================================== */
+
+        .contenedor{
+            position:relative;
+            width:450px;
+            height:220px;
+            border:3px solid green;
+            margin:auto;
+            background:#fafafa;
+        }
+
+        .absolute{
+            position:absolute;
+            top:80px;
+            right:20px;
+            width:180px;
+            padding:10px;
+            border:3px solid red;
+            background:#FFEBEE;
+        }
+
+        /* ==========================================
+           POSITION FIXED
+        ========================================== */
+
+        .fixed{
+            position:fixed;
+            bottom:15px;
+            right:15px;
+            background:#0b5394;
+            color:white;
+            padding:12px;
+            border-radius:8px;
+            font-size:14px;
+        }
+
+        /* ==========================================
+           POSITION STICKY
+        ========================================== */
+
+        .sticky{
+            position:sticky;
+            top:0;
+            background:#FFD966;
+            border:2px solid orange;
+            padding:12px;
+            font-weight:bold;
+        }
+
+        /* ==========================================
+           TEXTO SOBRE IMAGEN
+        ========================================== */
+
+        .imagen{
+            position:relative;
+            max-width:600px;
+            margin:auto;
+        }
+
+        .imagen img{
+            width:100%;
+            display:block;
+            border-radius:10px;
+        }
+
+        .texto{
+            position:absolute;
+            bottom:15px;
+            left:20px;
+            color:white;
+            font-size:24px;
+            font-weight:bold;
+            text-shadow:2px 2px 5px black;
+        }
+
+        /* ==========================================
+           TABLA
+        ========================================== */
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        table,th,td{
+            border:1px solid gray;
+        }
+
+        th{
+            background:#0b5394;
+            color:white;
+        }
+
+        th,td{
+            padding:10px;
+            text-align:left;
+        }
+
+        /* ==========================================
+           ESPACIO PARA SCROLL
+        ========================================== */
+
+        .espacio{
+            height:700px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 23 - CSS Position</h1>
+
+    <p>
+        La propiedad <strong>position</strong> permite controlar la ubicación de los
+        elementos dentro de una página web utilizando distintos tipos de posicionamiento.
+    </p>
+
+    <!-- ==========================================
+         STATIC
+    ========================================== -->
+
+    <section>
+
+        <h2>position: static</h2>
+
+        <div class="static">
+
+            Este elemento utiliza la posición <strong>static</strong>, que es el valor predeterminado.
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         RELATIVE
+    ========================================== -->
+
+    <section>
+
+        <h2>position: relative</h2>
+
+        <div class="relative">
+
+            Este elemento fue desplazado 30px hacia la derecha usando <strong>left:30px</strong>.
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         ABSOLUTE
+    ========================================== -->
+
+    <section>
+
+        <h2>position: absolute</h2>
+
+        <div class="contenedor">
+
+            Contenedor con <strong>position: relative</strong>
+
+            <div class="absolute">
+
+                Elemento con <strong>position: absolute</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         TEXTO SOBRE IMAGEN
+    ========================================== -->
+
+    <section>
+
+        <h2>Texto sobre una imagen</h2>
+
+        <div class="imagen">
+
+            <img src="https://picsum.photos/600/300"
+                 alt="Paisaje">
+
+            <div class="texto">
+
+                Texto Posicionado
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         STICKY
+    ========================================== -->
+
+    <section>
+
+        <h2>position: sticky</h2>
+
+        <div class="sticky">
+
+            Este elemento permanecerá pegado arriba al hacer scroll.
+
+        </div>
+
+        <div class="espacio">
+
+            <p>
+                Desplázate hacia abajo para observar cómo el elemento permanece visible
+                cuando llega a la parte superior de la ventana.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         TABLA
+    ========================================== -->
+
+    <section>
+
+        <h2>Diferencias entre los tipos de posición</h2>
+
+        <table>
+
+            <tr>
+
+                <th>Valor</th>
+
+                <th>Descripción</th>
+
+            </tr>
+
+            <tr>
+
+                <td>static</td>
+
+                <td>Posición normal del documento.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>relative</td>
+
+                <td>Se mueve respecto a su posición original.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>absolute</td>
+
+                <td>Se posiciona respecto al ancestro posicionado más cercano.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>fixed</td>
+
+                <td>Permanece fijo respecto a la ventana del navegador.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>sticky</td>
+
+                <td>Actúa como relative hasta cierto punto y luego se comporta como fixed.</td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- ==========================================
+         RESUMEN
+    ========================================== -->
+
+    <section>
+
+        <h2>Resumen</h2>
+
+        <ul>
+
+            <li><strong>static</strong>  Posición por defecto.</li>
+
+            <li><strong>relative</strong>  Se mueve desde su posición original.</li>
+
+            <li><strong>absolute</strong>  Sale del flujo normal y depende de un contenedor.</li>
+
+            <li><strong>fixed</strong>  Siempre permanece visible en la ventana.</li>
+
+            <li><strong>sticky</strong>  Se fija al hacer scroll.</li>
+
+            <li>Las propiedades <strong>top</strong>, <strong>bottom</strong>, <strong>left</strong> y <strong>right</strong> controlan la posición final.</li>
+
+        </ul>
+
+    </section>
+
+    <!-- ==========================================
+         POSITION FIXED
+    ========================================== -->
+
+    <div class="fixed">
+
+        Position: Fixed
+
+    </div>
+
+</body>
+
+</html>
