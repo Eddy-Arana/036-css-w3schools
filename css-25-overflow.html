@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 25 - CSS Overflow
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 25 - CSS Overflow</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin:40px;
+            background:#f4f4f4;
+            line-height:1.6;
+        }
+
+        h1{
+            text-align:center;
+            color:#2c3e50;
+        }
+
+        h2{
+            color:#0d6efd;
+            margin-top:40px;
+        }
+
+        section{
+            background:white;
+            padding:20px;
+            margin-bottom:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.15);
+        }
+
+        /* ===================================
+           Overflow: visible
+        =================================== */
+
+        .visible{
+            width:250px;
+            height:80px;
+            background:coral;
+            overflow:visible;
+            margin-bottom:120px;
+            padding:10px;
+        }
+
+        /* ===================================
+           Overflow: hidden
+        =================================== */
+
+        .hidden{
+            width:250px;
+            height:80px;
+            background:lightgreen;
+            overflow:hidden;
+            padding:10px;
+        }
+
+        /* ===================================
+           Overflow: scroll
+        =================================== */
+
+        .scroll{
+            width:250px;
+            height:80px;
+            background:lightskyblue;
+            overflow:scroll;
+            padding:10px;
+        }
+
+        /* ===================================
+           Overflow: auto
+        =================================== */
+
+        .auto{
+            width:250px;
+            height:80px;
+            background:khaki;
+            overflow:auto;
+            padding:10px;
+        }
+
+        /* ===================================
+           overflow-x y overflow-y
+        =================================== */
+
+        .overflowXY{
+            width:300px;
+            height:100px;
+            border:2px solid black;
+
+            overflow-x:scroll;
+            overflow-y:hidden;
+
+            white-space:nowrap;
+            padding:10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 25 - CSS Overflow</h1>
+
+    <!-- ===================================
+         Overflow Visible
+    ==================================== -->
+
+    <section>
+
+        <h2>overflow: visible (Predeterminado)</h2>
+
+        <div class="visible">
+
+            Este contenido es mucho más grande que el contenedor.
+            Como el overflow está en <strong>visible</strong>,
+            el contenido continúa mostrándose fuera del cuadro.
+
+        </div>
+
+    </section>
+
+    <!-- ===================================
+         Overflow Hidden
+    ==================================== -->
+
+    <section>
+
+        <h2>overflow: hidden</h2>
+
+        <div class="hidden">
+
+            Este contenido se corta cuando supera el tamaño del
+            contenedor y ya no puede verse.
+
+        </div>
+
+    </section>
+
+    <!-- ===================================
+         Overflow Scroll
+    ==================================== -->
+
+    <section>
+
+        <h2>overflow: scroll</h2>
+
+        <div class="scroll">
+
+            Este cuadro siempre muestra barras de desplazamiento,
+            aunque el contenido sea pequeño o grande.
+            El usuario puede desplazarse para leer todo el texto.
+
+        </div>
+
+    </section>
+
+    <!-- ===================================
+         Overflow Auto
+    ==================================== -->
+
+    <section>
+
+        <h2>overflow: auto</h2>
+
+        <div class="auto">
+
+            Las barras de desplazamiento aparecen únicamente
+            cuando son necesarias.
+
+            Este comportamiento es el más utilizado en el desarrollo web.
+
+        </div>
+
+    </section>
+
+    <!-- ===================================
+         overflow-x y overflow-y
+    ==================================== -->
+
+    <section>
+
+        <h2>overflow-x y overflow-y</h2>
+
+        <div class="overflowXY">
+
+            Este es un texto extremadamente largo que demuestra cómo
+            overflow-x permite únicamente el desplazamiento horizontal
+            mientras que overflow-y permanece oculto.
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
