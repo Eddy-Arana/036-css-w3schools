@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 24 - CSS z-index
+         El z-index controla el orden de apilamiento
+         de los elementos posicionados.
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 24 - CSS z-index</title>
+
+    <style>
+
+        /* ==========================================
+           Estilos generales
+        ========================================== */
+
+        body{
+
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f4;
+
+        }
+
+        h1{
+
+            text-align: center;
+
+        }
+
+        section{
+
+            background:white;
+            padding:20px;
+            margin-bottom:40px;
+            border-radius:10px;
+            box-shadow:0px 0px 8px rgba(0,0,0,.2);
+
+        }
+
+        h2{
+
+            color:steelblue;
+
+        }
+
+        /* ==========================================
+           Ejemplo 1
+           z-index negativo
+        ========================================== */
+
+        .ejemplo1{
+
+            position:relative;
+            height:220px;
+
+        }
+
+        .ejemplo1 img{
+
+            position:absolute;
+            left:0;
+            top:0;
+            width:250px;
+
+            /* La imagen queda detrás del texto */
+
+            z-index:-1;
+
+        }
+
+        .ejemplo1 h3{
+
+            margin-top:80px;
+
+        }
+
+        /* ==========================================
+           Ejemplo 2
+           Diferentes niveles de z-index
+        ========================================== */
+
+        .contenedor{
+
+            position:relative;
+            height:220px;
+            border:2px dashed gray;
+
+        }
+
+        .caja-negra{
+
+            position:relative;
+
+            z-index:1;
+
+            background:black;
+            color:white;
+
+            width:300px;
+            height:100px;
+
+            padding:15px;
+
+            margin:25px;
+
+        }
+
+        .caja-gris{
+
+            position:absolute;
+
+            z-index:3;
+
+            background:lightgray;
+
+            width:320px;
+            height:80px;
+
+            left:60px;
+            top:60px;
+
+            padding:15px;
+
+        }
+
+        .caja-verde{
+
+            position:absolute;
+
+            z-index:2;
+
+            background:lightgreen;
+
+            width:180px;
+            height:100px;
+
+            left:280px;
+            top:-10px;
+
+            padding:15px;
+
+        }
+
+        /* ==========================================
+           Ejemplo 3
+           Sin z-index
+        ========================================== */
+
+        .contenedor2{
+
+            position:relative;
+            height:220px;
+            border:2px dashed gray;
+
+        }
+
+        .box1{
+
+            position:relative;
+
+            background:black;
+            color:white;
+
+            width:300px;
+            height:100px;
+
+            margin:25px;
+            padding:15px;
+
+        }
+
+        .box2{
+
+            position:absolute;
+
+            background:lightgray;
+
+            width:320px;
+            height:80px;
+
+            left:60px;
+            top:60px;
+
+            padding:15px;
+
+        }
+
+        .box3{
+
+            position:absolute;
+
+            background:lightgreen;
+
+            width:180px;
+            height:100px;
+
+            left:280px;
+            top:-10px;
+
+            padding:15px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 24 - CSS z-index</h1>
+
+    <!-- ==========================================
+         Ejemplo 1
+    =========================================== -->
+
+    <section>
+
+        <h2>1. z-index negativo</h2>
+
+        <p>
+            La imagen tiene
+            <strong>z-index: -1</strong>,
+            por lo que queda detrás del texto.
+        </p>
+
+        <div class="ejemplo1">
+
+            <img src="https://picsum.photos/250/180"
+                 alt="Imagen de ejemplo">
+
+            <h3>Este texto aparece delante de la imagen.</h3>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         Ejemplo 2
+    =========================================== -->
+
+    <section>
+
+        <h2>2. Elementos con diferentes niveles</h2>
+
+        <p>
+            El elemento con mayor
+            <strong>z-index</strong>
+            aparece encima de los demás.
+        </p>
+
+        <div class="contenedor">
+
+            <div class="caja-negra">
+
+                Caja negra (z-index:1)
+
+            </div>
+
+            <div class="caja-gris">
+
+                Caja gris (z-index:3)
+
+            </div>
+
+            <div class="caja-verde">
+
+                Caja verde (z-index:2)
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         Ejemplo 3
+    =========================================== -->
+
+    <section>
+
+        <h2>3. Sin utilizar z-index</h2>
+
+        <p>
+            Cuando no se usa z-index,
+            los elementos se muestran
+            según el orden en que aparecen
+            en el HTML.
+        </p>
+
+        <div class="contenedor2">
+
+            <div class="box1">
+
+                Caja negra
+
+            </div>
+
+            <div class="box2">
+
+                Caja gris
+
+            </div>
+
+            <div class="box3">
+
+                Caja verde
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         Resumen
+    =========================================== -->
+
+    <section>
+
+        <h2>Resumen</h2>
+
+        <ul>
+
+            <li><strong>z-index</strong> controla el orden de apilamiento.</li>
+
+            <li>Solo funciona en elementos posicionados (relative, absolute, fixed o sticky).</li>
+
+            <li>Los valores mayores aparecen delante.</li>
+
+            <li>Los valores negativos colocan elementos detrás de otros.</li>
+
+            <li>Si no se especifica un z-index, el navegador usa el orden del HTML.</li>
+
+        </ul>
+
+    </section>
+
+</body>
+
+</html>
