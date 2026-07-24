@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 26 - CSS Float
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 26 - CSS Float</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin:40px;
+            background:#f4f4f4;
+            line-height:1.6;
+        }
+
+        h1{
+            text-align:center;
+            color:#2c3e50;
+        }
+
+        h2{
+            color:#0d6efd;
+            margin-top:40px;
+        }
+
+        section{
+            background:white;
+            padding:20px;
+            margin-bottom:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.15);
+        }
+
+        /*==========================================
+            Imagen de ejemplo
+        ==========================================*/
+
+        img{
+            width:150px;
+            height:150px;
+            border-radius:10px;
+        }
+
+        /*==========================================
+            Float Left
+        ==========================================*/
+
+        .left{
+            float:left;
+            margin-right:15px;
+        }
+
+        /*==========================================
+            Float Right
+        ==========================================*/
+
+        .right{
+            float:right;
+            margin-left:15px;
+        }
+
+        /*==========================================
+            Float None
+        ==========================================*/
+
+        .none{
+            float:none;
+            display:block;
+            margin-bottom:15px;
+        }
+
+        /*==========================================
+            Clear
+        ==========================================*/
+
+        .clear{
+            clear:both;
+        }
+
+        /*==========================================
+            Cajas flotantes
+        ==========================================*/
+
+        .box{
+            float:left;
+            width:30%;
+            padding:20px;
+            color:white;
+            text-align:center;
+            box-sizing:border-box;
+        }
+
+        .red{
+            background:#dc3545;
+        }
+
+        .yellow{
+            background:#ffc107;
+            color:black;
+        }
+
+        .green{
+            background:#198754;
+        }
+
+        /*==========================================
+            Clearfix
+        ==========================================*/
+
+        .clearfix::after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 26 - CSS Float</h1>
+
+    <!--==========================================
+        Float Left
+    ===========================================-->
+
+    <section>
+
+        <h2>float: left</h2>
+
+        <img class="left"
+             src="https://picsum.photos/200"
+             alt="Imagen">
+
+        <p>
+
+            La imagen flota hacia la izquierda y el texto se acomoda
+            alrededor de ella. Este comportamiento es muy utilizado
+            para colocar imágenes junto a un párrafo.
+
+        </p>
+
+    </section>
+
+    <!--==========================================
+        Float Right
+    ===========================================-->
+
+    <section class="clear">
+
+        <h2>float: right</h2>
+
+        <img class="right"
+             src="https://picsum.photos/201"
+             alt="Imagen">
+
+        <p>
+
+            En este ejemplo la imagen flota hacia la derecha mientras
+            el texto ocupa el espacio restante del lado izquierdo.
+
+        </p>
+
+    </section>
+
+    <!--==========================================
+        Float None
+    ===========================================-->
+
+    <section class="clear">
+
+        <h2>float: none</h2>
+
+        <img class="none"
+             src="https://picsum.photos/202"
+             alt="Imagen">
+
+        <p>
+
+            Con <strong>float: none</strong> la imagen permanece en
+            su posición normal y el texto aparece debajo.
+
+        </p>
+
+    </section>
+
+    <!--==========================================
+        Float Boxes
+    ===========================================-->
+
+    <section>
+
+        <h2>Cajas una al lado de otra</h2>
+
+        <div class="clearfix">
+
+            <div class="box red">
+                Caja 1
+            </div>
+
+            <div class="box yellow">
+                Caja 2
+            </div>
+
+            <div class="box green">
+                Caja 3
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--==========================================
+        Clear Property
+    ===========================================-->
+
+    <section>
+
+        <h2>Propiedad clear</h2>
+
+        <div style="float:left;
+                    background:lightblue;
+                    padding:20px;">
+            Caja flotante
+        </div>
+
+        <p class="clear">
+
+            Gracias a <strong>clear: both</strong>, este párrafo se
+            muestra debajo del elemento flotante y no a su lado.
+
+        </p>
+
+    </section>
+
+    <!--==========================================
+        Clearfix
+    ===========================================-->
+
+    <section>
+
+        <h2>Clearfix</h2>
+
+        <div class="clearfix"
+             style="border:2px solid #333;
+                    padding:10px;">
+
+            <img class="left"
+                 src="https://picsum.photos/203"
+                 alt="Imagen">
+
+            <p>
+
+                El clearfix evita que el contenedor colapse cuando
+                contiene elementos flotantes.
+
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
