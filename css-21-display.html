@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 21 - CSS Display Property
+         Autor: Tu Nombre
+         Descripción:
+         Demostración de la propiedad display y visibility.
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 21 - CSS Display</title>
+
+    <style>
+
+        /* ==========================================
+           ESTILOS GENERALES
+        ========================================== */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f4f4f4;
+            margin:30px;
+            line-height:1.7;
+        }
+
+        h1{
+            color:#0b5394;
+        }
+
+        h2{
+            color:#1c4587;
+            margin-top:45px;
+        }
+
+        section{
+            background:white;
+            padding:20px;
+            margin-bottom:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.1);
+        }
+
+        /* ==========================================
+           BLOCK
+        ========================================== */
+
+        .block{
+            display:block;
+            background:#cfe2f3;
+            padding:10px;
+            margin:8px 0;
+        }
+
+        /* ==========================================
+           INLINE
+        ========================================== */
+
+        .inline{
+            display:inline;
+            background:#ffe599;
+            padding:10px;
+        }
+
+        /* ==========================================
+           INLINE-BLOCK
+        ========================================== */
+
+        .inline-block{
+            display:inline-block;
+            width:150px;
+            height:70px;
+            background:#b6d7a8;
+            text-align:center;
+            line-height:70px;
+            margin:5px;
+        }
+
+        /* ==========================================
+           FLEX
+        ========================================== */
+
+        .flex{
+            display:flex;
+            gap:10px;
+        }
+
+        .flex div{
+            background:#6fa8dc;
+            color:white;
+            padding:20px;
+            flex:1;
+            text-align:center;
+        }
+
+        /* ==========================================
+           GRID
+        ========================================== */
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:10px;
+        }
+
+        .grid div{
+            background:#93c47d;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        /* ==========================================
+           DISPLAY NONE
+        ========================================== */
+
+        .oculto{
+            display:none;
+        }
+
+        /* ==========================================
+           VISIBILITY HIDDEN
+        ========================================== */
+
+        .hidden{
+            visibility:hidden;
+            background:#f4cccc;
+            padding:15px;
+        }
+
+        .visible{
+            background:#d9ead3;
+            padding:15px;
+        }
+
+        /* ==========================================
+           ENLACES COMO BLOQUES
+        ========================================== */
+
+        .menu a{
+            display:block;
+            background:#0b5394;
+            color:white;
+            text-decoration:none;
+            padding:12px;
+            margin:4px 0;
+            border-radius:5px;
+        }
+
+        .menu a:hover{
+            background:#073763;
+        }
+
+        /* ==========================================
+           LISTA HORIZONTAL
+        ========================================== */
+
+        .horizontal li{
+            display:inline;
+            margin-right:20px;
+            font-weight:bold;
+        }
+
+        /* ==========================================
+           BOTÓN
+        ========================================== */
+
+        button{
+            padding:10px 20px;
+            margin-top:15px;
+            cursor:pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 21 - CSS Display Property</h1>
+
+    <p>
+        La propiedad <strong>display</strong> controla cómo se muestra un elemento
+        dentro de la página web.
+    </p>
+
+    <!-- ==========================================
+         DISPLAY BLOCK
+    =========================================== -->
+
+    <section>
+
+        <h2>Display: block</h2>
+
+        <span class="block">Elemento 1</span>
+
+        <span class="block">Elemento 2</span>
+
+        <span class="block">Elemento 3</span>
+
+        <p>
+            Cada elemento ocupa toda la línea disponible.
+        </p>
+
+    </section>
+
+    <!-- ==========================================
+         DISPLAY INLINE
+    =========================================== -->
+
+    <section>
+
+        <h2>Display: inline</h2>
+
+        <div class="inline">Caja A</div>
+
+        <div class="inline">Caja B</div>
+
+        <div class="inline">Caja C</div>
+
+        <p>
+            Los elementos permanecen en la misma línea.
+        </p>
+
+    </section>
+
+    <!-- ==========================================
+         INLINE BLOCK
+    =========================================== -->
+
+    <section>
+
+        <h2>Display: inline-block</h2>
+
+        <div class="inline-block">1</div>
+
+        <div class="inline-block">2</div>
+
+        <div class="inline-block">3</div>
+
+        <p>
+            Permite mantener los elementos en línea pero con ancho y alto personalizados.
+        </p>
+
+    </section>
+
+    <!-- ==========================================
+         FLEX
+    =========================================== -->
+
+    <section>
+
+        <h2>Display: flex</h2>
+
+        <div class="flex">
+
+            <div>Flex 1</div>
+
+            <div>Flex 2</div>
+
+            <div>Flex 3</div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         GRID
+    =========================================== -->
+
+    <section>
+
+        <h2>Display: grid</h2>
+
+        <div class="grid">
+
+            <div>A</div>
+
+            <div>B</div>
+
+            <div>C</div>
+
+            <div>D</div>
+
+            <div>E</div>
+
+            <div>F</div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         ENLACES COMO BLOQUES
+    =========================================== -->
+
+    <section>
+
+        <h2>Enlaces con display:block</h2>
+
+        <div class="menu">
+
+            <a href="#">Inicio</a>
+
+            <a href="#">Servicios</a>
+
+            <a href="#">Contacto</a>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         LISTA HORIZONTAL
+    =========================================== -->
+
+    <section>
+
+        <h2>Lista Horizontal</h2>
+
+        <ul class="horizontal">
+
+            <li>Inicio</li>
+
+            <li>Productos</li>
+
+            <li>Acerca</li>
+
+            <li>Contacto</li>
+
+        </ul>
+
+    </section>
+
+    <!-- ==========================================
+         DISPLAY NONE
+    =========================================== -->
+
+    <section>
+
+        <h2>display:none</h2>
+
+        <p>
+            El siguiente cuadro existe en el HTML, pero no se muestra porque tiene
+            <strong>display:none</strong>.
+        </p>
+
+        <div class="oculto">
+
+            Este texto está oculto.
+
+        </div>
+
+        <button onclick="mostrar()">
+
+            Mostrar elemento oculto
+
+        </button>
+
+    </section>
+
+    <!-- ==========================================
+         VISIBILITY
+    =========================================== -->
+
+    <section>
+
+        <h2>visibility:hidden</h2>
+
+        <div class="visible">
+
+            Elemento visible.
+
+        </div>
+
+        <br>
+
+        <div class="hidden">
+
+            Este elemento ocupa espacio pero permanece oculto.
+
+        </div>
+
+        <br>
+
+        <div class="visible">
+
+            Otro elemento visible.
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         RESUMEN
+    =========================================== -->
+
+    <section>
+
+        <h2>Resumen</h2>
+
+        <ul>
+
+            <li><strong>block</strong> ocupa toda la línea.</li>
+
+            <li><strong>inline</strong>  ocupa solo el espacio necesario.</li>
+
+            <li><strong>inline-block</strong>  permite definir ancho y alto manteniéndose en línea.</li>
+
+            <li><strong>flex</strong>  organiza elementos en una fila o columna flexible.</li>
+
+            <li><strong>grid</strong>  organiza elementos en una cuadrícula.</li>
+
+            <li><strong>display:none</strong>  elimina completamente el elemento de la página.</li>
+
+            <li><strong>visibility:hidden</strong>  oculta el elemento, pero conserva su espacio.</li>
+
+        </ul>
+
+    </section>
+
+    <script>
+
+        function mostrar(){
+
+            document.querySelector(".oculto").style.display="block";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
