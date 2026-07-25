@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 30 - CSS Pseudo-classes
+         W3Schools CSS Tutorial
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 30 - CSS Pseudo-classes</title>
+
+    <style>
+
+        /* ==========================================
+           ESTILOS GENERALES
+        ========================================== */
+
+        body{
+
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f4f4f4;
+            margin:20px;
+            color:#333;
+
+        }
+
+        h1{
+
+            text-align:center;
+            color:#006699;
+
+        }
+
+        h2{
+
+            color:#006699;
+            border-bottom:2px solid #ddd;
+            padding-bottom:6px;
+            margin-top:45px;
+
+        }
+
+        section{
+
+            background:white;
+            padding:20px;
+            margin-bottom:35px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.1);
+
+        }
+
+        /* ==========================================
+           1. Estados de enlaces
+        ========================================== */
+
+        .links a:link{
+
+            color:red;
+
+        }
+
+        .links a:visited{
+
+            color:green;
+
+        }
+
+        .links a:hover{
+
+            color:orange;
+            font-weight:bold;
+
+        }
+
+        .links a:active{
+
+            color:blue;
+
+        }
+
+        /* ==========================================
+           2. Hover sobre un div
+        ========================================== */
+
+        .hover-box{
+
+            background:#ddd;
+            padding:20px;
+            text-align:center;
+            transition:0.3s;
+
+        }
+
+        .hover-box:hover{
+
+            background:#4CAF50;
+            color:white;
+
+        }
+
+        /* ==========================================
+           3. Focus en input
+        ========================================== */
+
+        input:focus{
+
+            background:lightyellow;
+            border:2px solid orange;
+            outline:none;
+
+        }
+
+        input{
+
+            padding:10px;
+            width:250px;
+
+        }
+
+        /* ==========================================
+           4. Tooltip con Hover
+        ========================================== */
+
+        .tooltip p{
+
+            display:none;
+
+            background:gold;
+
+            padding:15px;
+
+            border-radius:6px;
+
+            margin-top:10px;
+
+        }
+
+        .tooltip:hover p{
+
+            display:block;
+
+        }
+
+        /* ==========================================
+           5. first-child
+        ========================================== */
+
+        .first p:first-child{
+
+            color:blue;
+            font-weight:bold;
+
+        }
+
+        /* ==========================================
+           6. last-child
+        ========================================== */
+
+        .last p:last-child{
+
+            color:crimson;
+            font-weight:bold;
+
+        }
+
+        /* ==========================================
+           7. nth-child
+        ========================================== */
+
+        .nth li:nth-child(even){
+
+            background:#d9ecff;
+
+        }
+
+        .nth li{
+
+            padding:8px;
+
+        }
+
+        /* ==========================================
+           8. lang()
+        ========================================== */
+
+        q:lang(no){
+
+            quotes:"«" "»";
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 30 - CSS Pseudo-classes</h1>
+
+    <!-- ========================================== -->
+
+    <section>
+
+        <h2>1. Estados de un enlace</h2>
+
+        <div class="links">
+
+            <a href="https://www.google.com" target="_blank">
+                Visitar Google
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================== -->
+
+    <section>
+
+        <h2>2. Pseudo-clase :hover</h2>
+
+        <div class="hover-box">
+
+            Pase el cursor sobre este cuadro.
+
+        </div>
+
+    </section>
+
+    <!-- ========================================== -->
+
+    <section>
+
+        <h2>3. Pseudo-clase :focus</h2>
+
+        <input
+            type="text"
+            placeholder="Haga clic aquí">
+
+    </section>
+
+    <!-- ========================================== -->
+
+    <section>
+
+        <h2>4. Tooltip con :hover</h2>
+
+        <div class="tooltip">
+
+            Pase el cursor sobre este texto.
+
+            <p>
+
+                ¡Este mensaje aparece gracias a :hover!
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================== -->
+
+    <section>
+
+        <h2>5. Pseudo-clase :first-child</h2>
+
+        <div class="first">
+
+            <p>Primer párrafo (seleccionado).</p>
+
+            <p>Segundo párrafo.</p>
+
+            <p>Tercer párrafo.</p>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================== -->
+
+    <section>
+
+        <h2>6. Pseudo-clase :last-child</h2>
+
+        <div class="last">
+
+            <p>Primer párrafo.</p>
+
+            <p>Segundo párrafo.</p>
+
+            <p>Último párrafo (seleccionado).</p>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================== -->
+
+    <section>
+
+        <h2>7. Pseudo-clase :nth-child()</h2>
+
+        <ul class="nth">
+
+            <li>Elemento 1</li>
+
+            <li>Elemento 2</li>
+
+            <li>Elemento 3</li>
+
+            <li>Elemento 4</li>
+
+            <li>Elemento 5</li>
+
+            <li>Elemento 6</li>
+
+        </ul>
+
+    </section>
+
+    <!-- ========================================== -->
+
+    <section>
+
+        <h2>8. Pseudo-clase :lang()</h2>
+
+        <p>
+
+            Cita en noruego:
+
+            <q lang="no">
+
+                Dette er en tekst på norsk.
+
+            </q>
+
+        </p>
+
+    </section>
+
+    <!-- ========================================== -->
+
+    <section>
+
+        <h2>Resumen</h2>
+
+        <ul>
+
+            <li><strong>:hover</strong> Aplica estilos al pasar el cursor.</li>
+
+            <li><strong>:focus</strong> Aplica estilos cuando un elemento recibe el foco.</li>
+
+            <li><strong>:link</strong> Enlace sin visitar.</li>
+
+            <li><strong>:visited</strong> Enlace visitado.</li>
+
+            <li><strong>:active</strong> Enlace mientras se hace clic.</li>
+
+            <li><strong>:first-child</strong> Primer hijo.</li>
+
+            <li><strong>:last-child</strong> Último hijo.</li>
+
+            <li><strong>:nth-child()</strong> Selecciona un hijo específico.</li>
+
+            <li><strong>:lang()</strong> Selecciona elementos según el idioma.</li>
+
+        </ul>
+
+    </section>
+
+</body>
+
+</html>
