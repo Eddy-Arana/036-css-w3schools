@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 27 - CSS display: inline-block
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 27 - CSS display: inline-block</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin:40px;
+            background:#f4f4f4;
+            line-height:1.6;
+        }
+
+        h1{
+            text-align:center;
+            color:#2c3e50;
+        }
+
+        h2{
+            color:#0d6efd;
+            margin-top:40px;
+        }
+
+        section{
+            background:white;
+            padding:20px;
+            margin-bottom:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.15);
+        }
+
+        /*==========================================
+            display: inline
+        ==========================================*/
+
+        .inline{
+
+            display:inline;
+            width:120px;
+            height:50px;
+            padding:10px;
+            border:2px solid red;
+            background:#ffe5e5;
+
+        }
+
+        /*==========================================
+            display: inline-block
+        ==========================================*/
+
+        .inlineBlock{
+
+            display:inline-block;
+            width:120px;
+            height:50px;
+            padding:10px;
+            border:2px solid green;
+            background:#d9fdd3;
+            text-align:center;
+            margin:5px;
+
+        }
+
+        /*==========================================
+            display: block
+        ==========================================*/
+
+        .block{
+
+            display:block;
+            width:120px;
+            height:50px;
+            padding:10px;
+            border:2px solid blue;
+            background:#dbeafe;
+            margin-bottom:10px;
+
+        }
+
+        /*==========================================
+            Menú horizontal
+        ==========================================*/
+
+        .nav{
+
+            list-style:none;
+            background:#333;
+            padding:0;
+            margin:0;
+
+        }
+
+        .nav li{
+
+            display:inline-block;
+            padding:15px 20px;
+
+        }
+
+        .nav a{
+
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+
+        }
+
+        .nav li:hover{
+
+            background:#0d6efd;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 27 - CSS display: inline-block</h1>
+
+    <!--==========================================
+        Display Inline
+    ===========================================-->
+
+    <section>
+
+        <h2>display: inline</h2>
+
+        <span class="inline">Caja 1</span>
+        <span class="inline">Caja 2</span>
+        <span class="inline">Caja 3</span>
+
+        <p>
+
+            Los elementos <strong>inline</strong> permanecen en la
+            misma línea, pero no respetan correctamente propiedades
+            como width y height.
+
+        </p>
+
+    </section>
+
+    <!--==========================================
+        Display Inline-Block
+    ===========================================-->
+
+    <section>
+
+        <h2>display: inline-block</h2>
+
+        <span class="inlineBlock">Caja 1</span>
+        <span class="inlineBlock">Caja 2</span>
+        <span class="inlineBlock">Caja 3</span>
+
+        <p>
+
+            Los elementos <strong>inline-block</strong> permanecen en
+            la misma línea, pero permiten definir ancho, alto,
+            márgenes y relleno como un elemento de bloque.
+
+        </p>
+
+    </section>
+
+    <!--==========================================
+        Display Block
+    ===========================================-->
+
+    <section>
+
+        <h2>display: block</h2>
+
+        <span class="block">Caja 1</span>
+        <span class="block">Caja 2</span>
+        <span class="block">Caja 3</span>
+
+        <p>
+
+            Los elementos con <strong>display: block</strong> ocupan
+            todo el ancho disponible y comienzan en una nueva línea.
+
+        </p>
+
+    </section>
+
+    <!--==========================================
+        Menú Horizontal
+    ===========================================-->
+
+    <section>
+
+        <h2>Menú Horizontal con inline-block</h2>
+
+        <ul class="nav">
+
+            <li><a href="#">Inicio</a></li>
+
+            <li><a href="#">Servicios</a></li>
+
+            <li><a href="#">Productos</a></li>
+
+            <li><a href="#">Contacto</a></li>
+
+        </ul>
+
+        <p>
+
+            Un uso muy común de <strong>display: inline-block</strong>
+            es crear menús horizontales donde los elementos de una
+            lista aparecen uno al lado del otro.
+
+        </p>
+
+    </section>
+
+</body>
+
+</html>
