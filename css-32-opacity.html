@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 32 - CSS Opacity
+         W3Schools CSS Tutorial
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 32 - CSS Opacity</title>
+
+    <style>
+
+        /* ===========================
+           Estilos generales
+        ============================ */
+
+        body{
+
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f4f4f4;
+            margin:30px;
+            line-height:1.6;
+
+        }
+
+        h1{
+
+            text-align:center;
+            color:#0d6efd;
+
+        }
+
+        h2{
+
+            margin-top:45px;
+            color:#198754;
+
+        }
+
+        section{
+
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:8px;
+            box-shadow:0 0 10px rgba(0,0,0,.15);
+
+        }
+
+        img{
+
+            width:220px;
+            border-radius:8px;
+            margin:10px;
+
+        }
+
+        /* ====================================
+           Ejemplo 1 - Diferentes niveles
+        ===================================== */
+
+        .op20{
+
+            opacity:.2;
+
+        }
+
+        .op50{
+
+            opacity:.5;
+
+        }
+
+        .op100{
+
+            opacity:1;
+
+        }
+
+        /* ====================================
+           Ejemplo 2 - Hover
+        ===================================== */
+
+        .hover img{
+
+            opacity:.5;
+            transition:.4s;
+
+        }
+
+        .hover img:hover{
+
+            opacity:1;
+
+        }
+
+        /* ====================================
+           Ejemplo 3 - Hover inverso
+        ===================================== */
+
+        .reverse img{
+
+            transition:.4s;
+
+        }
+
+        .reverse img:hover{
+
+            opacity:.4;
+
+        }
+
+        /* ====================================
+           Ejemplo 4 - Opacity en cajas
+        ===================================== */
+
+        .box1{
+
+            background:green;
+            color:white;
+            padding:20px;
+            margin:10px 0;
+            opacity:1;
+
+        }
+
+        .box2{
+
+            background:green;
+            color:white;
+            padding:20px;
+            margin:10px 0;
+            opacity:.6;
+
+        }
+
+        .box3{
+
+            background:green;
+            color:white;
+            padding:20px;
+            margin:10px 0;
+            opacity:.3;
+
+        }
+
+        .box4{
+
+            background:green;
+            color:white;
+            padding:20px;
+            margin:10px 0;
+            opacity:.1;
+
+        }
+
+        /* ====================================
+           Ejemplo 5 - RGBA
+        ===================================== */
+
+        .rgba1{
+
+            background:rgba(4,170,109,1);
+            color:white;
+            padding:20px;
+            margin:10px 0;
+
+        }
+
+        .rgba2{
+
+            background:rgba(4,170,109,.6);
+            color:white;
+            padding:20px;
+            margin:10px 0;
+
+        }
+
+        .rgba3{
+
+            background:rgba(4,170,109,.3);
+            color:black;
+            padding:20px;
+            margin:10px 0;
+
+        }
+
+        .rgba4{
+
+            background:rgba(4,170,109,.1);
+            color:black;
+            padding:20px;
+            margin:10px 0;
+
+        }
+
+        /* ====================================
+           Ejemplo 6 - Caja transparente
+        ===================================== */
+
+        .background{
+
+            background-image:url("https://picsum.photos/900/300");
+            padding:50px;
+
+        }
+
+        .transbox{
+
+            background:rgba(255,255,255,.65);
+            padding:25px;
+            border:1px solid black;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 32 - CSS Opacity</h1>
+
+    <p>
+
+        La propiedad <strong>opacity</strong> controla el nivel de
+        transparencia de un elemento.
+
+    </p>
+
+    <!-- ======================================= -->
+
+    <section>
+
+        <h2>1. Diferentes niveles de Opacity</h2>
+
+        <img class="op20"
+             src="https://picsum.photos/id/1015/250/160"
+             alt="Naturaleza">
+
+        <img class="op50"
+             src="https://picsum.photos/id/1015/250/160"
+             alt="Naturaleza">
+
+        <img class="op100"
+             src="https://picsum.photos/id/1015/250/160"
+             alt="Naturaleza">
+
+        <p>
+
+            0.2 &nbsp;&nbsp;
+            0.5 &nbsp;&nbsp;
+            1.0
+
+        </p>
+
+    </section>
+
+    <!-- ======================================= -->
+
+    <section class="hover">
+
+        <h2>2. Opacity con :hover</h2>
+
+        <p>Pasa el cursor sobre las imágenes.</p>
+
+        <img src="https://picsum.photos/id/1025/250/160"
+             alt="Animal">
+
+        <img src="https://picsum.photos/id/1035/250/160"
+             alt="Paisaje">
+
+        <img src="https://picsum.photos/id/1040/250/160"
+             alt="Montañas">
+
+    </section>
+
+    <!-- ======================================= -->
+
+    <section class="reverse">
+
+        <h2>3. Hover inverso</h2>
+
+        <p>Las imágenes pierden opacidad cuando pasas el cursor.</p>
+
+        <img src="https://picsum.photos/id/106/250/160"
+             alt="Imagen">
+
+        <img src="https://picsum.photos/id/1074/250/160"
+             alt="Imagen">
+
+        <img src="https://picsum.photos/id/1084/250/160"
+             alt="Imagen">
+
+    </section>
+
+    <!-- ======================================= -->
+
+    <section>
+
+        <h2>4. Opacity aplicada a una caja completa</h2>
+
+        <div class="box1">
+
+            Opacity 1 (100%)
+
+        </div>
+
+        <div class="box2">
+
+            Opacity 0.6 (60%)
+
+        </div>
+
+        <div class="box3">
+
+            Opacity 0.3 (30%)
+
+        </div>
+
+        <div class="box4">
+
+            Opacity 0.1 (10%)
+
+        </div>
+
+        <p>
+
+            Observa que tanto el fondo como el texto se vuelven
+            transparentes.
+
+        </p>
+
+    </section>
+
+    <!-- ======================================= -->
+
+    <section>
+
+        <h2>5. Transparencia usando RGBA</h2>
+
+        <div class="rgba1">
+
+            Fondo RGBA 100%
+
+        </div>
+
+        <div class="rgba2">
+
+            Fondo RGBA 60%
+
+        </div>
+
+        <div class="rgba3">
+
+            Fondo RGBA 30%
+
+        </div>
+
+        <div class="rgba4">
+
+            Fondo RGBA 10%
+
+        </div>
+
+        <p>
+
+            Aquí solamente el fondo es transparente; el texto conserva
+            su opacidad.
+
+        </p>
+
+    </section>
+
+    <!-- ======================================= -->
+
+    <section>
+
+        <h2>6. Caja transparente sobre una imagen</h2>
+
+        <div class="background">
+
+            <div class="transbox">
+
+                <h3>Texto sobre una imagen</h3>
+
+                <p>
+
+                    Gracias al uso de <strong>rgba()</strong>, el fondo
+                    es transparente mientras que el texto permanece
+                    completamente legible.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================= -->
+
+    <section>
+
+        <h2>Resumen</h2>
+
+        <ul>
+
+            <li><strong>opacity:1</strong> Sin transparencia.</li>
+
+            <li><strong>opacity:0.5</strong> 50% transparente.</li>
+
+            <li><strong>opacity:0</strong> Invisible.</li>
+
+            <li>Puede combinarse con <strong>:hover</strong>.</li>
+
+            <li>RGBA permite transparencia solo en el fondo.</li>
+
+            <li>Es muy utilizada para efectos visuales modernos.</li>
+
+        </ul>
+
+    </section>
+
+</body>
+
+</html>
