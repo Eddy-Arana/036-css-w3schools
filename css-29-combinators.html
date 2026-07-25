@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 29 - CSS Combinators
+         W3Schools CSS Tutorial
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 29 - CSS Combinators</title>
+
+    <style>
+
+        /* ==========================================
+           ESTILOS GENERALES
+        ========================================== */
+
+        body{
+
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f4f4f4;
+            margin:20px;
+            color:#333;
+
+        }
+
+        h1{
+
+            text-align:center;
+            color:#006699;
+
+        }
+
+        h2{
+
+            color:#006699;
+            border-bottom:2px solid #ddd;
+            padding-bottom:6px;
+            margin-top:45px;
+
+        }
+
+        section{
+
+            background:white;
+            padding:20px;
+            margin-bottom:35px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.1);
+
+        }
+
+        .contenedor{
+
+            border:2px solid #999;
+            padding:15px;
+            margin-top:15px;
+
+        }
+
+        /* ==========================================
+           1. Descendant Combinator (espacio)
+        ========================================== */
+
+        .descendiente p{
+
+            background:gold;
+            padding:8px;
+
+        }
+
+        /* ==========================================
+           2. Child Combinator (>)
+        ========================================== */
+
+        .hijo > p{
+
+            background:lightgreen;
+            padding:8px;
+
+        }
+
+        /* ==========================================
+           3. Next Sibling (+)
+        ========================================== */
+
+        .hermano + p{
+
+            background:lightskyblue;
+            padding:8px;
+
+        }
+
+        /* ==========================================
+           4. Subsequent Sibling (~)
+        ========================================== */
+
+        .general ~ p{
+
+            background:lightcoral;
+            padding:8px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 29 - CSS Combinators</h1>
+
+    <!-- ========================================== -->
+
+    <section>
+
+        <h2>1. Descendant Combinator (espacio)</h2>
+
+        <p>
+            Selecciona todos los elementos descendientes.
+        </p>
+
+        <div class="contenedor descendiente">
+
+            <p>Este párrafo es descendiente del div.</p>
+
+            <div>
+
+                <p>Este también es descendiente.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================== -->
+
+    <section>
+
+        <h2>2. Child Combinator (&gt;)</h2>
+
+        <p>
+            Solo selecciona los hijos directos.
+        </p>
+
+        <div class="contenedor hijo">
+
+            <p>Hijo directo (seleccionado).</p>
+
+            <div>
+
+                <p>No es hijo directo (no seleccionado).</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================== -->
+
+    <section>
+
+        <h2>3. Next Sibling Combinator (+)</h2>
+
+        <p>
+            Selecciona únicamente el primer hermano siguiente.
+        </p>
+
+        <div class="contenedor">
+
+            <div class="hermano">
+
+                Elemento DIV
+
+            </div>
+
+            <p>Primer párrafo (seleccionado).</p>
+
+            <p>Segundo párrafo (no seleccionado).</p>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================== -->
+
+    <section>
+
+        <h2>4. Subsequent Sibling Combinator (~)</h2>
+
+        <p>
+            Selecciona todos los hermanos siguientes.
+        </p>
+
+        <div class="contenedor">
+
+            <div class="general">
+
+                Elemento DIV
+
+            </div>
+
+            <p>Primer párrafo (seleccionado).</p>
+
+            <p>Segundo párrafo (seleccionado).</p>
+
+            <p>Tercer párrafo (seleccionado).</p>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================== -->
+
+    <section>
+
+        <h2>Resumen</h2>
+
+        <ul>
+
+            <li><strong>Espacio ( )</strong> Selecciona todos los descendientes.</li>
+
+            <li><strong>&gt;</strong> Selecciona únicamente hijos directos.</li>
+
+            <li><strong>+</strong> Selecciona el hermano inmediato.</li>
+
+            <li><strong>~</strong> Selecciona todos los hermanos siguientes.</li>
+
+        </ul>
+
+    </section>
+
+</body>
+
+</html>
