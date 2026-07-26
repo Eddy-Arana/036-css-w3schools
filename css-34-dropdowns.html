@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 34 - CSS Dropdowns
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 34 - CSS Dropdowns</title>
+
+    <style>
+
+        /* =====================================================
+           ESTILOS GENERALES
+        ====================================================== */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1{
+            text-align: center;
+            color: #333;
+        }
+
+        h2{
+            margin-top: 40px;
+            color: #0066cc;
+        }
+
+        section{
+            background: white;
+            padding: 20px;
+            margin-bottom: 35px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 8px rgba(0,0,0,.15);
+        }
+
+        hr{
+            margin: 35px 0;
+        }
+
+        /* =====================================================
+           EJEMPLO 1
+           Dropdown con texto
+        ====================================================== */
+
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 5px 12px rgba(0,0,0,.25);
+        }
+
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+
+        /* =====================================================
+           EJEMPLO 2
+           Dropdown con botón
+        ====================================================== */
+
+        .dropbtn{
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 22px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .menu{
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-content{
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,.25);
+        }
+
+        .menu-content a{
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 12px;
+        }
+
+        .menu-content a:hover{
+            background-color: #eeeeee;
+        }
+
+        .menu:hover .menu-content{
+            display: block;
+        }
+
+        .menu:hover .dropbtn{
+            background-color: #028a59;
+        }
+
+        /* =====================================================
+           EJEMPLO 3
+           Dropdown alineado a la derecha
+        ====================================================== */
+
+        .right-dropdown{
+            position: relative;
+            display: inline-block;
+        }
+
+        .right-content{
+            display: none;
+            position: absolute;
+            right: 0;
+            background: white;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,.3);
+        }
+
+        .right-content a{
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 12px;
+        }
+
+        .right-content a:hover{
+            background-color: lightgray;
+        }
+
+        .right-dropdown:hover .right-content{
+            display: block;
+        }
+
+        /* =====================================================
+           EJEMPLO 4
+           Dropdown con imagen
+        ====================================================== */
+
+        .image-dropdown{
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-dropdown img{
+            width: 220px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .image-content{
+            display: none;
+            position: absolute;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0px 8px 18px rgba(0,0,0,.3);
+        }
+
+        .image-content img{
+            width: 300px;
+        }
+
+        .image-dropdown:hover .image-content{
+            display: block;
+        }
+
+        /* =====================================================
+           EJEMPLO 5
+           Navbar con Dropdown
+        ====================================================== */
+
+        nav{
+            background-color: #333;
+        }
+
+        nav ul{
+            margin:0;
+            padding:0;
+            list-style:none;
+            display:flex;
+        }
+
+        nav li{
+            position:relative;
+        }
+
+        nav a{
+            display:block;
+            color:white;
+            padding:15px 20px;
+            text-decoration:none;
+        }
+
+        nav a:hover{
+            background:#555;
+        }
+
+        .submenu{
+            display:none;
+            position:absolute;
+            background:white;
+            min-width:180px;
+        }
+
+        .submenu a{
+            color:black;
+        }
+
+        nav li:hover .submenu{
+            display:block;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Lección 34 - CSS Dropdowns</h1>
+
+    <!-- =====================================================
+         Ejemplo 1
+    ====================================================== -->
+
+    <section>
+
+        <h2>1. Dropdown con texto</h2>
+
+        <p>Pasa el cursor sobre el cuadro:</p>
+
+        <div class="dropdown">
+
+            <strong>Mouse sobre mí</strong>
+
+            <div class="dropdown-content">
+
+                ¡Hola Mundo! Este contenido aparece al pasar el cursor.
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         Ejemplo 2
+    ====================================================== -->
+
+    <section>
+
+        <h2>2. Dropdown con botón</h2>
+
+        <div class="menu">
+
+            <button class="dropbtn">
+                Menú
+            </button>
+
+            <div class="menu-content">
+
+                <a href="#">Inicio</a>
+
+                <a href="#">Servicios</a>
+
+                <a href="#">Contacto</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         Ejemplo 3
+    ====================================================== -->
+
+    <section>
+
+        <h2>3. Dropdown alineado a la derecha</h2>
+
+        <div class="right-dropdown">
+
+            <button class="dropbtn">
+                Opciones
+            </button>
+
+            <div class="right-content">
+
+                <a href="#">Perfil</a>
+
+                <a href="#">Configuración</a>
+
+                <a href="#">Salir</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         Ejemplo 4
+    ====================================================== -->
+
+    <section>
+
+        <h2>4. Dropdown con imagen</h2>
+
+        <p>Pasa el cursor sobre la imagen.</p>
+
+        <div class="image-dropdown">
+
+            <img src="https://picsum.photos/220/140"
+                 alt="Imagen">
+
+            <div class="image-content">
+
+                <img src="https://picsum.photos/300/200"
+                     alt="Imagen ampliada">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         Ejemplo 5
+    ====================================================== -->
+
+    <section>
+
+        <h2>5. Navbar con Dropdown</h2>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#">Inicio</a></li>
+
+                <li>
+
+                    <a href="#">Productos</a>
+
+                    <div class="submenu">
+
+                        <a href="#">Computadoras</a>
+
+                        <a href="#">Celulares</a>
+
+                        <a href="#">Accesorios</a>
+
+                    </div>
+
+                </li>
+
+                <li><a href="#">Contacto</a></li>
+
+            </ul>
+
+        </nav>
+
+    </section>
+
+    <hr>
+
+    <h2>Resumen</h2>
+
+    <ul>
+
+        <li><strong>Dropdown:</strong> muestra contenido oculto cuando el usuario pasa el cursor o hace clic.</li>
+
+        <li><strong>position: relative:</strong> sirve como referencia para el contenido desplegable.</li>
+
+        <li><strong>position: absolute:</strong> coloca el contenido debajo del elemento principal.</li>
+
+        <li><strong>display: none:</strong> mantiene oculto el contenido.</li>
+
+        <li><strong>:hover:</strong> permite mostrar el contenido al pasar el mouse.</li>
+
+        <li><strong>box-shadow:</strong> agrega una sombra para dar apariencia de menú flotante.</li>
+
+    </ul>
+
+</body>
+
+</html>
