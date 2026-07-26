@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 35 - CSS Forms
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 35 - CSS Forms</title>
+
+    <style>
+
+        /* =====================================================
+           Estilos Generales
+        ====================================================== */
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1{
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        h2{
+            color: #1565c0;
+            margin-top: 40px;
+            border-bottom: 2px solid #1565c0;
+            padding-bottom: 5px;
+        }
+
+        section{
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.15);
+        }
+
+        code{
+            background:#eeeeee;
+            padding:2px 6px;
+            border-radius:4px;
+        }
+
+        hr{
+            margin:40px 0;
+        }
+
+        /* =====================================================
+           Formulario Base
+        ====================================================== */
+
+        form{
+            margin-top:20px;
+        }
+
+        label{
+            display:block;
+            margin-top:15px;
+            font-weight:bold;
+        }
+
+        /* =====================================================
+           1. Width
+        ====================================================== */
+
+        .width input[type=text]{
+            width:100%;
+        }
+
+        /* =====================================================
+           2. Padding y Margin
+        ====================================================== */
+
+        .padding input[type=text]{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            box-sizing:border-box;
+        }
+
+        /* =====================================================
+           3. Border y Border Radius
+        ====================================================== */
+
+        .border input[type=text]{
+
+            width:100%;
+            padding:10px;
+            border:2px solid red;
+            border-radius:8px;
+
+        }
+
+        .bottom-border input[type=text]{
+
+            width:100%;
+            padding:10px;
+            border:none;
+            border-bottom:2px solid red;
+
+        }
+
+        /* =====================================================
+           4. Background Color
+        ====================================================== */
+
+        .background input[type=text]{
+
+            width:100%;
+            padding:12px;
+            background:#3CBC8D;
+            color:white;
+            border:none;
+
+        }
+
+        /* =====================================================
+           5. Focus
+        ====================================================== */
+
+        .focus input[type=text]{
+
+            width:100%;
+            padding:12px;
+            border:2px solid gray;
+            transition:.3s;
+
+        }
+
+        .focus input[type=text]:focus{
+
+            background:lightblue;
+            border:3px solid #555;
+            outline:none;
+
+        }
+
+        /* =====================================================
+           6. Icono
+        ====================================================== */
+
+        .icon input{
+
+            width:100%;
+            padding:12px;
+            padding-left:45px;
+
+            background-image:url("https://cdn-icons-png.flaticon.com/512/622/622669.png");
+            background-repeat:no-repeat;
+            background-size:20px;
+            background-position:10px center;
+
+        }
+
+        /* =====================================================
+           7. Animated Search
+        ====================================================== */
+
+        .search input{
+
+            width:180px;
+            padding:12px;
+            transition:width .4s ease-in-out;
+
+        }
+
+        .search input:focus{
+
+            width:100%;
+
+        }
+
+        /* =====================================================
+           8. Textarea
+        ====================================================== */
+
+        textarea{
+
+            width:100%;
+            height:150px;
+            padding:12px;
+            resize:none;
+            border:2px solid #ccc;
+            border-radius:5px;
+            background:#f8f8f8;
+
+        }
+
+        /* =====================================================
+           9. Select
+        ====================================================== */
+
+        select{
+
+            width:100%;
+            padding:15px;
+            border:none;
+            border-radius:5px;
+            background:#eeeeee;
+
+        }
+
+        /* =====================================================
+           10. Buttons
+        ====================================================== */
+
+        input[type=submit],
+        input[type=reset],
+        input[type=button]{
+
+            background:#04AA6D;
+            color:white;
+            border:none;
+            padding:14px 25px;
+            cursor:pointer;
+            margin-top:15px;
+            margin-right:10px;
+
+        }
+
+        input[type=submit]:hover,
+        input[type=reset]:hover,
+        input[type=button]:hover{
+
+            background:#038857;
+
+        }
+
+        /* =====================================================
+           11. Responsive Form
+        ====================================================== */
+
+        .responsive{
+
+            display:grid;
+            grid-template-columns:150px 1fr;
+            gap:10px;
+            align-items:center;
+
+        }
+
+        @media(max-width:600px){
+
+            .responsive{
+
+                grid-template-columns:1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Lección 35 - CSS Forms</h1>
+
+<p>
+Esta lección muestra cómo aplicar estilos CSS a formularios HTML utilizando
+propiedades como <code>width</code>, <code>padding</code>,
+<code>border</code>, <code>background</code>,
+<code>:focus</code>, <code>textarea</code>,
+<code>select</code>, botones y diseño responsive.
+</p>
+
+<hr>
+
+<!-- ===================================================== -->
+<section>
+
+<h2>1. Width (Ancho)</h2>
+
+<p>El campo ocupa el 100% del contenedor.</p>
+
+<form class="width">
+
+<label>Nombre</label>
+
+<input type="text" placeholder="Tu nombre">
+
+</form>
+
+</section>
+
+<!-- ===================================================== -->
+
+<section>
+
+<h2>2. Padding y Margin</h2>
+
+<form class="padding">
+
+<label>Nombre</label>
+<input type="text">
+
+<label>Apellido</label>
+<input type="text">
+
+</form>
+
+</section>
+
+<!-- ===================================================== -->
+
+<section>
+
+<h2>3. Bordes</h2>
+
+<h3>Border + Border Radius</h3>
+
+<form class="border">
+
+<input type="text" placeholder="Campo con borde">
+
+</form>
+
+<br>
+
+<h3>Solo borde inferior</h3>
+
+<form class="bottom-border">
+
+<input type="text" placeholder="Solo borde inferior">
+
+</form>
+
+</section>
+
+<!-- ===================================================== -->
+
+<section>
+
+<h2>4. Background Color</h2>
+
+<form class="background">
+
+<input type="text" value="John">
+
+</form>
+
+</section>
+
+<!-- ===================================================== -->
+
+<section>
+
+<h2>5. Focus</h2>
+
+<p>Haz clic dentro del campo.</p>
+
+<form class="focus">
+
+<input type="text" placeholder="Haz clic aquí">
+
+</form>
+
+</section>
+
+<!-- ===================================================== -->
+
+<section>
+
+<h2>6. Input con Icono</h2>
+
+<form class="icon">
+
+<input type="text" placeholder="Buscar">
+
+</form>
+
+</section>
+
+<!-- ===================================================== -->
+
+<section>
+
+<h2>7. Search Animado</h2>
+
+<form class="search">
+
+<input type="text" placeholder="Buscar...">
+
+</form>
+
+</section>
+
+<!-- ===================================================== -->
+
+<section>
+
+<h2>8. Textarea</h2>
+
+<textarea placeholder="Escribe un comentario..."></textarea>
+
+</section>
+
+<!-- ===================================================== -->
+
+<section>
+
+<h2>9. Select</h2>
+
+<select>
+
+<option>Guatemala</option>
+<option>México</option>
+<option>El Salvador</option>
+<option>Honduras</option>
+
+</select>
+
+</section>
+
+<!-- ===================================================== -->
+
+<section>
+
+<h2>10. Botones</h2>
+
+<input type="submit" value="Enviar">
+
+<input type="reset" value="Limpiar">
+
+<input type="button" value="Botón">
+
+</section>
+
+<!-- ===================================================== -->
+
+<section>
+
+<h2>11. Formulario Responsive</h2>
+
+<form class="responsive">
+
+<label>Nombre</label>
+<input type="text">
+
+<label>Apellido</label>
+<input type="text">
+
+<label>Correo</label>
+<input type="email">
+
+<label>País</label>
+
+<select>
+
+<option>Guatemala</option>
+<option>México</option>
+<option>El Salvador</option>
+
+</select>
+
+</form>
+
+</section>
+
+<hr>
+
+<h2>Resumen</h2>
+
+<ul>
+
+<li><strong>width:</strong> controla el ancho del campo.</li>
+
+<li><strong>padding:</strong> agrega espacio interno.</li>
+
+<li><strong>margin:</strong> agrega espacio externo.</li>
+
+<li><strong>border:</strong> personaliza el borde.</li>
+
+<li><strong>border-radius:</strong> redondea las esquinas.</li>
+
+<li><strong>background-color:</strong> cambia el fondo.</li>
+
+<li><strong>:focus:</strong> aplica estilos al seleccionar un campo.</li>
+
+<li><strong>textarea:</strong> permite escribir varias líneas.</li>
+
+<li><strong>select:</strong> personaliza listas desplegables.</li>
+
+<li><strong>Buttons:</strong> permite diseñar botones del formulario.</li>
+
+<li><strong>Media Query:</strong> adapta el formulario a pantallas pequeñas.</li>
+
+</ul>
+
+</body>
+</html>
