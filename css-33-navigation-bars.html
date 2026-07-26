@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         Lección 33 - CSS Navigation Bars
+         W3Schools CSS Tutorial
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lección 33 - CSS Navigation Bars</title>
+
+    <style>
+
+        /* =====================================================
+           Estilos generales
+        ====================================================== */
+
+        *{
+            box-sizing:border-box;
+        }
+
+        body{
+
+            font-family:Arial, Helvetica, sans-serif;
+            margin:30px;
+            background:#f4f4f4;
+            line-height:1.6;
+
+        }
+
+        h1{
+
+            text-align:center;
+            color:#0d6efd;
+
+        }
+
+        h2{
+
+            color:#198754;
+
+        }
+
+        section{
+
+            background:white;
+            margin:25px 0;
+            padding:20px;
+            border-radius:8px;
+            box-shadow:0 0 10px rgba(0,0,0,.15);
+
+        }
+
+        /* =====================================================
+           1. Lista base
+        ====================================================== */
+
+        .base ul{
+
+            list-style-type:none;
+            margin:0;
+            padding:0;
+
+        }
+
+        .base li{
+
+            padding:8px;
+
+        }
+
+        /* =====================================================
+           2. Navbar vertical
+        ====================================================== */
+
+        .vertical ul{
+
+            list-style:none;
+            margin:0;
+            padding:0;
+            width:220px;
+            background:#eeeeee;
+
+        }
+
+        .vertical li a{
+
+            display:block;
+            padding:12px;
+            text-decoration:none;
+            color:black;
+
+        }
+
+        .vertical li a:hover{
+
+            background:#555;
+            color:white;
+
+        }
+
+        .vertical .active{
+
+            background:#04AA6D;
+            color:white;
+
+        }
+
+        /* =====================================================
+           3. Navbar horizontal usando Float
+        ====================================================== */
+
+        .floatnav ul{
+
+            list-style:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            background:#333;
+
+        }
+
+        .floatnav li{
+
+            float:left;
+
+        }
+
+        .floatnav li a{
+
+            display:block;
+            color:white;
+            padding:14px 18px;
+            text-decoration:none;
+
+        }
+
+        .floatnav li a:hover{
+
+            background:#111;
+
+        }
+
+        .floatnav .active{
+
+            background:#04AA6D;
+
+        }
+
+        /* =====================================================
+           4. Navbar con Flexbox
+        ====================================================== */
+
+        .flexnav ul{
+
+            display:flex;
+            justify-content:center;
+            list-style:none;
+            margin:0;
+            padding:0;
+            background:#222;
+
+        }
+
+        .flexnav li a{
+
+            display:block;
+            padding:15px 20px;
+            color:white;
+            text-decoration:none;
+
+        }
+
+        .flexnav li a:hover{
+
+            background:#0d6efd;
+
+        }
+
+        /* =====================================================
+           5. Navbar gris
+        ====================================================== */
+
+        .gray ul{
+
+            display:flex;
+            list-style:none;
+            margin:0;
+            padding:0;
+            background:#f3f3f3;
+            border:1px solid #ccc;
+
+        }
+
+        .gray li a{
+
+            display:block;
+            padding:15px;
+            color:black;
+            text-decoration:none;
+
+        }
+
+        .gray li a:hover{
+
+            background:#dddddd;
+
+        }
+
+        /* =====================================================
+           6. Navbar Sticky
+        ====================================================== */
+
+        .sticky{
+
+            position:sticky;
+            top:0;
+            background:#444;
+            padding:10px;
+            color:white;
+            text-align:center;
+
+        }
+
+        /* =====================================================
+           7. Navbar Fixed
+        ====================================================== */
+
+        .fixed-demo{
+
+            position:fixed;
+            bottom:0;
+            left:0;
+            width:100%;
+            background:#222;
+            color:white;
+            text-align:center;
+            padding:12px;
+
+        }
+
+        /* =====================================================
+           8. Tabla resumen
+        ====================================================== */
+
+        table{
+
+            width:100%;
+            border-collapse:collapse;
+
+        }
+
+        table,
+        th,
+        td{
+
+            border:1px solid #999;
+
+        }
+
+        th{
+
+            background:#0d6efd;
+            color:white;
+
+        }
+
+        th,
+        td{
+
+            padding:10px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Lección 33 - CSS Navigation Bars</h1>
+
+<p>
+
+Las barras de navegación permiten al usuario desplazarse fácilmente entre las diferentes páginas o secciones de un sitio web.
+
+</p>
+
+<!-- ====================================================== -->
+
+<section class="base">
+
+<h2>1. Lista base</h2>
+
+<ul>
+
+<li>Inicio</li>
+
+<li>Noticias</li>
+
+<li>Contacto</li>
+
+<li>Acerca de</li>
+
+</ul>
+
+</section>
+
+<!-- ====================================================== -->
+
+<section class="vertical">
+
+<h2>2. Barra de navegación vertical</h2>
+
+<ul>
+
+<li><a class="active" href="#">Inicio</a></li>
+
+<li><a href="#">Noticias</a></li>
+
+<li><a href="#">Servicios</a></li>
+
+<li><a href="#">Contacto</a></li>
+
+</ul>
+
+</section>
+
+<!-- ====================================================== -->
+
+<section class="floatnav">
+
+<h2>3. Barra horizontal usando Float</h2>
+
+<ul>
+
+<li><a class="active" href="#">Inicio</a></li>
+
+<li><a href="#">Noticias</a></li>
+
+<li><a href="#">Servicios</a></li>
+
+<li><a href="#">Contacto</a></li>
+
+</ul>
+
+</section>
+
+<!-- ====================================================== -->
+
+<section class="flexnav">
+
+<h2>4. Barra horizontal usando Flexbox</h2>
+
+<ul>
+
+<li><a href="#">Inicio</a></li>
+
+<li><a href="#">Noticias</a></li>
+
+<li><a href="#">Servicios</a></li>
+
+<li><a href="#">Contacto</a></li>
+
+</ul>
+
+</section>
+
+<!-- ====================================================== -->
+
+<section class="gray">
+
+<h2>5. Barra gris</h2>
+
+<ul>
+
+<li><a href="#">Inicio</a></li>
+
+<li><a href="#">Noticias</a></li>
+
+<li><a href="#">Servicios</a></li>
+
+<li><a href="#">Contacto</a></li>
+
+</ul>
+
+</section>
+
+<!-- ====================================================== -->
+
+<section>
+
+<h2>6. Barra Sticky</h2>
+
+<div class="sticky">
+
+Esta barra permanece visible al hacer scroll (position: sticky).
+
+</div>
+
+<p>
+
+Desplázate por la página para observar el comportamiento de la barra sticky.
+
+</p>
+
+<p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Mauris eget sem vitae erat convallis luctus. Donec et sem nec tortor suscipit commodo.
+
+</p>
+
+<p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Mauris eget sem vitae erat convallis luctus. Donec et sem nec tortor suscipit commodo.
+
+</p>
+
+<p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Mauris eget sem vitae erat convallis luctus. Donec et sem nec tortor suscipit commodo.
+
+</p>
+
+</section>
+
+<!-- ====================================================== -->
+
+<section>
+
+<h2>7. Barra Fixed</h2>
+
+<p>
+
+Al final de la ventana del navegador aparece una barra fija utilizando <strong>position: fixed</strong>.
+
+</p>
+
+</section>
+
+<!-- ====================================================== -->
+
+<section>
+
+<h2>8. Resumen</h2>
+
+<table>
+
+<tr>
+
+<th>Propiedad</th>
+
+<th>Función</th>
+
+</tr>
+
+<tr>
+
+<td>list-style</td>
+
+<td>Elimina las viñetas de la lista.</td>
+
+</tr>
+
+<tr>
+
+<td>display:block</td>
+
+<td>Hace que todo el enlace sea clicable.</td>
+
+</tr>
+
+<tr>
+
+<td>float:left</td>
+
+<td>Crea barras horizontales tradicionales.</td>
+
+</tr>
+
+<tr>
+
+<td>display:flex</td>
+
+<td>Crea barras modernas y flexibles.</td>
+
+</tr>
+
+<tr>
+
+<td>position:fixed</td>
+
+<td>Fija la barra en la pantalla.</td>
+
+</tr>
+
+<tr>
+
+<td>position:sticky</td>
+
+<td>Se fija únicamente al llegar al punto indicado.</td>
+
+</tr>
+
+<tr>
+
+<td>.active</td>
+
+<td>Indica la página actual.</td>
+
+</tr>
+
+<tr>
+
+<td>:hover</td>
+
+<td>Cambia el estilo cuando el cursor pasa sobre un enlace.</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<div class="fixed-demo">
+
+Barra Fixed - Siempre permanece en la parte inferior
+
+</div>
+
+</body>
+
+</html>
